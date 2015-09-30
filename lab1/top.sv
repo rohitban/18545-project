@@ -5,16 +5,15 @@ module top
     input  logic        btnC,btnL,
     output logic [7:0]  an, // for segment demuxing
     output logic [15:0]      led,
-    output logic [6:0]  seg,
-    output logic [15:0] result);
+    output logic [6:0]  seg);
 
     logic rst_b; 
-    //logic [15:0] result;
+    logic [15:0] result;
     logic [3:0][6:0] seg_data; 
     logic [7:0] shift_cnt;
     logic [1:0] cnt;  
     
-    assign rst_b = btnL;
+    assign rst_b = ~btnL;
     assign an = ~shift_cnt;
      
     always_comb begin
