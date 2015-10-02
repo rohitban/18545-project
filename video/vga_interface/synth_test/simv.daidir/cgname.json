@@ -1,0 +1,77 @@
+{
+    "register": [
+        "register",
+        "DAC4W",
+        "module"
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "decoder": [
+        "decoder",
+        "zf0bY",
+        "module"
+    ],
+    "mux2to1": [
+        "mux2to1",
+        "TDywx",
+        "module"
+    ],
+    "adder": [
+        "adder",
+        "Qq4Ev",
+        "module"
+    ],
+    "mux": [
+        "mux",
+        "RZvU4",
+        "module"
+    ],
+    "sync_register": [
+        "sync_register",
+        "mGx3r",
+        "module"
+    ],
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
+        "module"
+    ],
+    "mux4to1": [
+        "mux4to1",
+        "HmmeF",
+        "module"
+    ],
+    "counter": [
+        "counter",
+        "MQn6b",
+        "module"
+    ],
+    "vga_ctrl": [
+        "vga_ctrl",
+        "BhCDy",
+        "module"
+    ],
+    "BCD_counter": [
+        "BCD_counter",
+        "A0ABL",
+        "module"
+    ],
+    "offset_check": [
+        "offset_check",
+        "SZ5kb",
+        "module"
+    ],
+    "red_blue": [
+        "red_blue",
+        "pscrk",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ]
+}
