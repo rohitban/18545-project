@@ -1,0 +1,128 @@
+{
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "limit_counter": [
+            "limit_counter",
+            "kIF6S",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "comparator": [
+            "comparator",
+            "U57Qt",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "red_blue": [
+            "red_blue",
+            "pscrk",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileProcesses": [
+        "cgproc.1339233.json"
+    ],
+    "stat": {
+        "nMops": 3030
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "PEModules": [],
+    "CompileStatus": "Successful",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 59467
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "comparator",
+        "adder",
+        "mux",
+        "mux2to1",
+        "mux4to1",
+        "decoder",
+        "register",
+        "sync_register",
+        "shift_register",
+        "counter",
+        "limit_counter",
+        "BCD_counter",
+        "offset_check",
+        "red_blue"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "Misc": {
+        "archive_dir": "archive.0",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/synth_test/simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/synth_test",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/synth_test/csrc",
+        "default_output_dir": "csrc",
+        "daidir": "simv.daidir"
+    }
+}

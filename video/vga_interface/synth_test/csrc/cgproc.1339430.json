@@ -1,0 +1,54 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "register": {},
+        "std": {},
+        "decoder": {},
+        "mux2to1": {},
+        "adder": {},
+        "sync_register": {},
+        "mux": {},
+        "shift_register": {},
+        "mux4to1": {},
+        "counter": {},
+        "vga_ctrl": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "BCD_counter": {},
+        "offset_check": {},
+        "red_blue": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "bytes": 11773,
+            "out": "amcQw_d.o",
+            "mode": 4,
+            "archive": "archive.1/_1339430_archive_1.a"
+        },
+        "BhCDy_d": {
+            "mod": "vga_ctrl",
+            "bytes": 13787,
+            "out": "BhCDy_d.o",
+            "mode": 4,
+            "archive": "archive.1/_1339430_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.1/_1339430_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11773
+                ],
+                [
+                    "BhCDy_d.o",
+                    13787
+                ]
+            ],
+            "size": 25560
+        }
+    ]
+}

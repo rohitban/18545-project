@@ -1,0 +1,224 @@
+{
+    "MlibObjs": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "PrevCompiledModules": {
+        "mux2to1": {
+            "TDywx_d": {
+                "bytes": 6683,
+                "mod": "mux2to1",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "TDywx_d.o"
+            }
+        },
+        "adder": {
+            "Qq4Ev_d": {
+                "bytes": 7484,
+                "mod": "adder",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "Qq4Ev_d.o"
+            }
+        },
+        "shift_register": {
+            "JPGqC_d": {
+                "bytes": 7736,
+                "mod": "shift_register",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "JPGqC_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 11055,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4,
+                "archive": "archive.30/_1335472_archive_1.a"
+            }
+        },
+        "sync_register": {
+            "mGx3r_d": {
+                "bytes": 7445,
+                "mod": "sync_register",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "mGx3r_d.o"
+            }
+        },
+        "offset_check": {
+            "SZ5kb_d": {
+                "bytes": 7501,
+                "mod": "offset_check",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "SZ5kb_d.o"
+            }
+        },
+        "decoder": {
+            "zf0bY_d": {
+                "bytes": 7927,
+                "mod": "decoder",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "zf0bY_d.o"
+            }
+        },
+        "mux4to1": {
+            "HmmeF_d": {
+                "bytes": 8203,
+                "mod": "mux4to1",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "HmmeF_d.o"
+            }
+        },
+        "BCD_counter": {
+            "A0ABL_d": {
+                "bytes": 8909,
+                "mod": "BCD_counter",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "A0ABL_d.o"
+            }
+        },
+        "counter": {
+            "MQn6b_d": {
+                "bytes": 7855,
+                "mod": "counter",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "MQn6b_d.o"
+            }
+        },
+        "register": {
+            "DAC4W_d": {
+                "bytes": 7956,
+                "mod": "register",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "DAC4W_d.o"
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "bytes": 6328,
+                "mod": "mux",
+                "mode": 4,
+                "archive": "archive.30/_prev_archive_1.a",
+                "out": "RZvU4_d.o"
+            }
+        }
+    },
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "vga_ctrl": [
+            "vga_ctrl",
+            "BhCDy",
+            "module"
+        ],
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "vga_ctrl"
+    ],
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "stat": {
+        "nMops": 963
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60223
+    },
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.1335472.json"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface",
+        "default_output_dir": "csrc",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/simv.daidir",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.30"
+    },
+    "CompileStatus": "Successful"
+}
