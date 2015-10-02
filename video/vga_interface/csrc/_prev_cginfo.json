@@ -1,0 +1,233 @@
+{
+    "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60344
+    },
+    "CompileStatus": "Successful",
+    "stat": {
+        "nMops": 1058
+    },
+    "PrevCompiledModules": {
+        "shift_register": {
+            "JPGqC_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7736,
+                "mode": 4,
+                "mod": "shift_register",
+                "out": "JPGqC_d.o"
+            }
+        },
+        "adder": {
+            "Qq4Ev_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7484,
+                "mode": 4,
+                "mod": "adder",
+                "out": "Qq4Ev_d.o"
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 6328,
+                "mode": 4,
+                "mod": "mux",
+                "out": "RZvU4_d.o"
+            }
+        },
+        "mux2to1": {
+            "TDywx_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 6683,
+                "mode": 4,
+                "mod": "mux2to1",
+                "out": "TDywx_d.o"
+            }
+        },
+        "offset_check": {
+            "SZ5kb_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7501,
+                "mode": 4,
+                "mod": "offset_check",
+                "out": "SZ5kb_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 29004,
+                "mode": 4,
+                "mod": "std",
+                "out": "reYIK_d.o"
+            }
+        },
+        "sync_register": {
+            "mGx3r_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7445,
+                "mode": 4,
+                "mod": "sync_register",
+                "out": "mGx3r_d.o"
+            }
+        },
+        "decoder": {
+            "zf0bY_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7927,
+                "mode": 4,
+                "mod": "decoder",
+                "out": "zf0bY_d.o"
+            }
+        },
+        "vga_test": {
+            "yrmkC_d": {
+                "archive": "archive.29/_1275135_archive_1.a",
+                "bytes": 20044,
+                "mode": 4,
+                "mod": "vga_test",
+                "out": "yrmkC_d.o"
+            }
+        },
+        "mux4to1": {
+            "HmmeF_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 8203,
+                "mode": 4,
+                "mod": "mux4to1",
+                "out": "HmmeF_d.o"
+            }
+        },
+        "BCD_counter": {
+            "A0ABL_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 8909,
+                "mode": 4,
+                "mod": "BCD_counter",
+                "out": "A0ABL_d.o"
+            }
+        },
+        "counter": {
+            "MQn6b_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7855,
+                "mode": 4,
+                "mod": "counter",
+                "out": "MQn6b_d.o"
+            }
+        },
+        "register": {
+            "DAC4W_d": {
+                "archive": "archive.29/_prev_archive_1.a",
+                "bytes": 7956,
+                "mode": 4,
+                "mod": "register",
+                "out": "DAC4W_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.29/_1275135_archive_1.a",
+                "bytes": 11055,
+                "mode": 4,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o"
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "NameTable": {
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "vga_test": [
+            "vga_test",
+            "yrmkC",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "vga_test"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.1275135.json"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface",
+        "csrc": "csrc",
+        "archive_dir": "archive.29",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/csrc",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/vga_interface/simv.daidir"
+    }
+}
