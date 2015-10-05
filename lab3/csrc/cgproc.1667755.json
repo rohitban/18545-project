@@ -1,0 +1,54 @@
+{
+    "Modules": {
+        "counter": {},
+        "...MASTER...": {},
+        "std": {},
+        "top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "mux4to1": {},
+        "comparator": {},
+        "adder": {},
+        "mux2to1": {},
+        "mux": {},
+        "BCD_counter": {},
+        "decoder": {},
+        "offset_check": {},
+        "register": {},
+        "sync_register": {},
+        "shift_register": {}
+    },
+    "ObjArchives": [
+        {
+            "size": 22316,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11261
+                ],
+                [
+                    "Emx8S_d.o",
+                    11055
+                ]
+            ],
+            "archive": "archive.8/_1667755_archive_1.a"
+        }
+    ],
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "mod": "...MASTER...",
+            "bytes": 11261,
+            "out": "amcQw_d.o",
+            "archive": "archive.8/_1667755_archive_1.a"
+        },
+        "Emx8S_d": {
+            "mode": 4,
+            "mod": "top",
+            "bytes": 11055,
+            "out": "Emx8S_d.o",
+            "archive": "archive.8/_1667755_archive_1.a"
+        }
+    }
+}
