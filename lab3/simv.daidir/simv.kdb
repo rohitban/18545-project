@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/afs/ece.cmu.edu/usr/rohitban/Private/545/lab3
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=pwm_test comparator adder mux mux2to1 mux4to1 decoder register sync_register shift_register counter BCD_counter offset_check 

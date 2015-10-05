@@ -1,0 +1,24 @@
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  5 06:32 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/rohitban/Private/545/lab3/inter.vpd' was opened successfully.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 22083570
+CPU Time:      1.610 seconds;       Data structure size:   0.0Mb
+Mon Oct  5 06:35:55 2015
+14 modules and 0 UDP read.
+	However, due to incremental compilation, only 1 module needs to be compiled.
+ld -shared  -o .//../simv.daidir//_csrc0.so amcQwB.o 
+rm -f _csrc0.so
+../simv up to date
+Finished rebuilding the design.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  5 06:35 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/rohitban/Private/545/lab3/inter.vpd' was opened successfully.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 61208520
+CPU Time:      4.080 seconds;       Data structure size:   0.0Mb
+Mon Oct  5 06:43:29 2015

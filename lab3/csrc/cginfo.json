@@ -1,0 +1,238 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "adder": {
+            "Qq4Ev_d": {
+                "out": "Qq4Ev_d.o",
+                "bytes": 7484,
+                "mode": 4,
+                "mod": "adder",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "mux2to1": {
+            "TDywx_d": {
+                "out": "TDywx_d.o",
+                "bytes": 6683,
+                "mode": 4,
+                "mod": "mux2to1",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "sync_register": {
+            "mGx3r_d": {
+                "out": "mGx3r_d.o",
+                "bytes": 7445,
+                "mode": 4,
+                "mod": "sync_register",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "register": {
+            "DAC4W_d": {
+                "out": "DAC4W_d.o",
+                "bytes": 7956,
+                "mode": 4,
+                "mod": "register",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "offset_check": {
+            "SZ5kb_d": {
+                "out": "SZ5kb_d.o",
+                "bytes": 7501,
+                "mode": 4,
+                "mod": "offset_check",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "mux4to1": {
+            "HmmeF_d": {
+                "out": "HmmeF_d.o",
+                "bytes": 8203,
+                "mode": 4,
+                "mod": "mux4to1",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "bytes": 11354,
+                "mode": 4,
+                "mod": "...MASTER...",
+                "archive": "archive.8/_1667755_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "bytes": 29004,
+                "mode": 4,
+                "mod": "std",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "counter": {
+            "MQn6b_d": {
+                "out": "MQn6b_d.o",
+                "bytes": 7855,
+                "mode": 4,
+                "mod": "counter",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "decoder": {
+            "zf0bY_d": {
+                "out": "zf0bY_d.o",
+                "bytes": 7927,
+                "mode": 4,
+                "mod": "decoder",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "BCD_counter": {
+            "A0ABL_d": {
+                "out": "A0ABL_d.o",
+                "bytes": 8909,
+                "mode": 4,
+                "mod": "BCD_counter",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "out": "RZvU4_d.o",
+                "bytes": 6328,
+                "mode": 4,
+                "mod": "mux",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "shift_register": {
+            "JPGqC_d": {
+                "out": "JPGqC_d.o",
+                "bytes": 7736,
+                "mode": 4,
+                "mod": "shift_register",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "comparator": {
+            "U57Qt_d": {
+                "out": "U57Qt_d.o",
+                "bytes": 6658,
+                "mode": 4,
+                "mod": "comparator",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        }
+    },
+    "SIMBData": {
+        "bytes": 58808,
+        "out": "amcQwB.o"
+    },
+    "NameTable": {
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "top": [
+            "top",
+            "Emx8S",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "comparator": [
+            "comparator",
+            "U57Qt",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
+    "CurCompileModules": [
+        "...MASTER...",
+        "top"
+    ],
+    "stat": {
+        "nMops": 559
+    },
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.1667755.json"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/545/lab3",
+        "csrc": "csrc",
+        "archive_dir": "archive.8",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/lab3/csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/lab3/simv.daidir",
+        "default_output_dir": "csrc"
+    }
+}

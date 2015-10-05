@@ -1,0 +1,77 @@
+{
+    "BCD_counter": [
+        "BCD_counter",
+        "A0ABL",
+        "module"
+    ],
+    "decoder": [
+        "decoder",
+        "zf0bY",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "counter": [
+        "counter",
+        "MQn6b",
+        "module"
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "top": [
+        "top",
+        "Emx8S",
+        "module"
+    ],
+    "mux4to1": [
+        "mux4to1",
+        "HmmeF",
+        "module"
+    ],
+    "comparator": [
+        "comparator",
+        "U57Qt",
+        "module"
+    ],
+    "adder": [
+        "adder",
+        "Qq4Ev",
+        "module"
+    ],
+    "mux2to1": [
+        "mux2to1",
+        "TDywx",
+        "module"
+    ],
+    "mux": [
+        "mux",
+        "RZvU4",
+        "module"
+    ],
+    "offset_check": [
+        "offset_check",
+        "SZ5kb",
+        "module"
+    ],
+    "register": [
+        "register",
+        "DAC4W",
+        "module"
+    ],
+    "sync_register": [
+        "sync_register",
+        "mGx3r",
+        "module"
+    ],
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
+        "module"
+    ]
+}
