@@ -1,0 +1,17 @@
+Rohit Banerjee
+rohitban@
+Xiaofan Li
+xli2@
+
+
+18545 Lab 3: 
+
+In order to create audio output on our Nexys 4 FPGA we first
+attempted to drive the PWM output of the board with a 10KHz
+PWM signal with varying duty cycles. However, we were unable to
+get any sound from the speaker. 
+
+Subsequently, we converted a .wav file into a .coe file
+to be loaded into the on board block RAM. However, we were unable
+to find an encoding scheme to convert the raw signal data in the coe 
+file to a 1-bit PWM output to feed into the ampPWM output port on the board.
