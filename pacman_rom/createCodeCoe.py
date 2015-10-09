@@ -1,5 +1,6 @@
 radix = """MEMORY_INITIALIZATION_RADIX=16;\nMEMORY_INITIALIZATION_VECTOR="""
 
+sliceIndex = 2
 readCount = 5
 
 
@@ -16,8 +17,12 @@ def main():
 			path = folder+fileName
 			for line in open(path):
 				for word in line.split(" "):
-					word = word[:readCount-1]
-					coe_string += "\n" + word + ','
+					firstByte = word[:sliceIndex]
+					assert(len(firstByte)==2)
+					coe_string += "\n" + firstByte + ','
+					secondByte = word[sliceIndex:readCount-1]
+					coe_string += "\n" + secondByte + ','
+					
 	except:
 		print("File open failure")
 
