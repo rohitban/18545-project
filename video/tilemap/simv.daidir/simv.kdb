@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=tile_addr_tester 

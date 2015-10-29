@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "std": {},
+        "...MASTER...": {},
+        "color_store": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "mode": 4,
+            "bytes": 7923,
+            "archive": "archive.28/_13735_archive_1.a"
+        },
+        "ZJBWb_d": {
+            "mod": "color_store",
+            "out": "ZJBWb_d.o",
+            "mode": 4,
+            "bytes": 9199,
+            "archive": "archive.28/_13735_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.28/_13735_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7923
+                ],
+                [
+                    "ZJBWb_d.o",
+                    9199
+                ]
+            ],
+            "size": 17122
+        }
+    ]
+}

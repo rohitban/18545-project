@@ -1,0 +1,70 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.1/_prev_archive_1.a",
+                "mod": "std",
+                "bytes": 29004,
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.1/_3636699_archive_1.a",
+                "mod": "...MASTER...",
+                "bytes": 8048,
+                "mode": 4,
+                "out": "amcQw_d.o"
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "dr_demo_test": [
+            "dr_demo_test",
+            "PIH9T",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "dr_demo_test"
+    ],
+    "CompileProcesses": [
+        "cgproc.3636699.json"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58593
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/tilemap_demo",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/tilemap_demo/csrc",
+        "archive_dir": "archive.1",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/tilemap_demo/simv.daidir"
+    },
+    "stat": {
+        "nMops": 864
+    },
+    "CompileStatus": "Successful"
+}

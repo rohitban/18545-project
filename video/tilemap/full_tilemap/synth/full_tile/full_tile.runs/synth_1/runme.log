@@ -1,0 +1,622 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module comparator [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:3]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module adder [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:14]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module mux [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:26]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module mux2to1 [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:61]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module mux4to1 [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:91]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module decoder [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:135]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module register [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:177]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module sync_register [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:194]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module shift_register [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:263]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:333]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module limit_counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module BCD_1DIGIT_counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:426]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module BCD_counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:487]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module range_check [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:588]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module offset_check [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:621]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module comparator [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:3]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module adder [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:14]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module mux [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:26]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module mux2to1 [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:61]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module mux4to1 [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:91]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module decoder [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:135]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module register [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:177]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module sync_register [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:194]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module shift_register [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:263]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:333]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module limit_counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module BCD_1DIGIT_counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:426]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module BCD_counter [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:487]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module range_check [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:588]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module offset_check [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:621]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module vga_ctrl [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/vga_controller.sv:47]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1072.797 ; gain = 163.551 ; free physical = 2569 ; free virtual = 16579
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/top.sv:3]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'vga_ctrl' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/vga_controller.sv:47]
+INFO: [Synth 8-638] synthesizing module 'limit_counter' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+	Parameter w bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'limit_counter' (2#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+INFO: [Synth 8-638] synthesizing module 'comparator' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:3]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'comparator' (3#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:3]
+INFO: [Synth 8-638] synthesizing module 'limit_counter__parameterized0' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+	Parameter w bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'limit_counter__parameterized0' (3#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+INFO: [Synth 8-638] synthesizing module 'limit_counter__parameterized1' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+	Parameter w bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'limit_counter__parameterized1' (3#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+INFO: [Synth 8-638] synthesizing module 'limit_counter__parameterized2' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+	Parameter w bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'limit_counter__parameterized2' (3#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/lib.sv:355]
+INFO: [Synth 8-256] done synthesizing module 'vga_ctrl' (4#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/vga_controller.sv:47]
+INFO: [Synth 8-638] synthesizing module 'full_tile' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/full_tile.sv:1]
+INFO: [Synth 8-638] synthesizing module 'tilemap_rom' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/tilemap_rom_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'tilemap_rom' (5#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/tilemap_rom_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'pixel_num' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:7]
+INFO: [Synth 8-256] done synthesizing module 'pixel_num' (6#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:7]
+INFO: [Synth 8-638] synthesizing module 'tile_rom' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/tile_rom_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'tile_rom' (7#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/tile_rom_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'pixel_data_dcd' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_data.sv:3]
+INFO: [Synth 8-256] done synthesizing module 'pixel_data_dcd' (8#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_data.sv:3]
+INFO: [Synth 8-638] synthesizing module 'palette_4byte_rom' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/palette_4byte_rom_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'palette_4byte_rom' (9#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/realtime/palette_4byte_rom_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'palette_mux' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/full_tile.sv:129]
+INFO: [Synth 8-256] done synthesizing module 'palette_mux' (10#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/full_tile.sv:129]
+INFO: [Synth 8-638] synthesizing module 'color_store' [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/color_store.sv:3]
+INFO: [Synth 8-256] done synthesizing module 'color_store' (11#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/color_store.sv:3]
+WARNING: [Synth 8-324] index 3 out of range [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/full_tile.sv:113]
+WARNING: [Synth 8-324] index 3 out of range [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/full_tile.sv:114]
+INFO: [Synth 8-256] done synthesizing module 'full_tile' (12#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/full_tile.sv:1]
+INFO: [Synth 8-256] done synthesizing module 'top' (13#1) [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1094.055 ; gain = 184.809 ; free physical = 2546 ; free virtual = 16557
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1094.055 ; gain = 184.809 ; free physical = 2547 ; free virtual = 16557
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/dcp_4/clk_wiz_0_in_context.xdc] for cell 'clk_div'
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/dcp_4/clk_wiz_0_in_context.xdc] for cell 'clk_div'
+Parsing XDC File [/afs/ece.cmu.edu/usr/rohitban/Downloads/Nexys4_Master.xdc]
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/rohitban/Downloads/Nexys4_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1442.531 ; gain = 0.000 ; free physical = 2348 ; free virtual = 16359
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2347 ; free virtual = 16358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2347 ; free virtual = 16358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/synth/full_tile/full_tile.runs/synth_1/.Xil/Vivado-21253-ahtanum.andrew.cmu.edu/dcp_4/clk_wiz_0_in_context.xdc, line 3).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2347 ; free virtual = 16358
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2336 ; free virtual = 16346
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 16    
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module limit_counter 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module limit_counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module limit_counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module limit_counter__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module vga_ctrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pixel_num 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module palette_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module color_store 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 16    
+Module full_tile 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2336 ; free virtual = 16346
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/full_tilemap/pixel_num.sv:21]
+WARNING: [Synth 8-3917] design top has port vgaRed[3] driven by constant 0
+WARNING: [Synth 8-3917] design top has port vgaGreen[3] driven by constant 0
+WARNING: [Synth 8-3917] design top has port vgaBlue[3] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2336 ; free virtual = 16346
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2336 ; free virtual = 16346
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[15][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[14][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[13][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[12][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[11][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[10][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[9][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[8][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[7][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[6][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[5][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[4][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[3][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[2][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[1][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[15][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[14][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[13][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[12][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[11][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[10][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[9][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[8][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[7][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[6][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[5][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[4][7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[15][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[14][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[13][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[12][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[11][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[10][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[9][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[8][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[7][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[6][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[5][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[4][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[3][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[15][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[14][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[13][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[12][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[10][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[9][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[8][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[7][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[6][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[5][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[4][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[3][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[2][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[15][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[14][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[13][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[12][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[11][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[10][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[9][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[8][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[7][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[6][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[5][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[4][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[3][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[2][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[1][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[15][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[14][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[13][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[12][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[11][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[10][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[8][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[7][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[6][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[5][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[15][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[14][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ft/c_store/colors_reg[13][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ft/c_store/colors_reg[12][1] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[15][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[14][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[13][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[12][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[11][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[10][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[9][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[8][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[7][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[6][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[5][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[4][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[3][7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[3][6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[3][5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ft/c_store/colors_reg[3][4] ) is unused and will be removed from module top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2325 ; free virtual = 16336
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2325 ; free virtual = 16336
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2325 ; free virtual = 16336
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2289 ; free virtual = 16299
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2288 ; free virtual = 16299
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2272 ; free virtual = 16283
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2271 ; free virtual = 16282
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2271 ; free virtual = 16282
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2271 ; free virtual = 16282
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2271 ; free virtual = 16282
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2271 ; free virtual = 16282
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |clk_wiz_0         |         1|
+|2     |tilemap_rom       |         1|
+|3     |tile_rom          |         1|
+|4     |palette_4byte_rom |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |clk_wiz_0         |     1|
+|2     |palette_4byte_rom |     1|
+|3     |tile_rom          |     1|
+|4     |tilemap_rom       |     1|
+|5     |BUFG              |     1|
+|6     |CARRY4            |     3|
+|7     |LUT1              |    18|
+|8     |LUT2              |     8|
+|9     |LUT3              |    11|
+|10    |LUT4              |     8|
+|11    |LUT5              |    15|
+|12    |LUT6              |    30|
+|13    |FDRE              |    41|
+|14    |IBUF              |     6|
+|15    |OBUF              |    14|
++------+------------------+------+
+
+Report Instance Areas: 
++------+-------------+------------------------------+------+
+|      |Instance     |Module                        |Cells |
++------+-------------+------------------------------+------+
+|1     |top          |                              |   205|
+|2     |  ft         |full_tile                     |    64|
+|3     |  v1         |vga_ctrl                      |   118|
+|4     |    colcount |limit_counter__parameterized1 |    27|
+|5     |    hscount  |limit_counter                 |    35|
+|6     |    rowcount |limit_counter__parameterized2 |    25|
+|7     |    vscount  |limit_counter__parameterized0 |    31|
++------+-------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2271 ; free virtual = 16282
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 131 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1442.531 ; gain = 68.285 ; free physical = 2272 ; free virtual = 16282
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1442.531 ; gain = 533.285 ; free physical = 2272 ; free virtual = 16282
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+153 Infos, 105 Warnings, 31 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1442.531 ; gain = 424.766 ; free physical = 2272 ; free virtual = 16282
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1474.551 ; gain = 0.000 ; free physical = 2263 ; free virtual = 16274
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 12:17:19 2015...

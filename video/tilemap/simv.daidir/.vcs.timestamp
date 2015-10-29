@@ -1,0 +1,91 @@
+0 
+22
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags=
+-Mobjects= /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-gen_obj
+-picarchive
+-q
+-sverilog
+/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
+color_store.sv
+57
+sysc_uni_pwd=/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap
+XMODIFIERS=@im=ibus
+XDG_VTNR=1
+XDG_SESSION_ID=1522
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/28920
+XDG_MENU_PREFIX=gnome-
+XAUTHORITY=/run/gdm/auth-for-rohitban-0sGdah/database
+WINDOWPATH=1
+VTE_VERSION=3406
+VMR_MODE_FLAG=32
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=amd64
+USERNAME=rohitban
+UNAME=/bin/uname
+TOOL_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
+SYN_DIR=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/synopsys-2007.03-SP5
+SYNOPSYS=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys
+SSH_AUTH_SOCK=/run/user/28920/keyring-vaBrC2/ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=7174
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/7152,unix/unix:/tmp/.ICE-unix/7152
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QUARTUS_64BIT=1
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PYTHONPATH=/afs/ece/class/ece447/bin:/afs/ece/class/ece447/bin:/afs/ece/class/ece447/bin:
+OVA_UUM=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:28920
+KDEDIRS=/usr
+HISTCONTROL=ignoredups
+GPG_AGENT_INFO=/run/user/28920/keyring-vaBrC2/gpg:0:1
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_KEYRING_PID=7126
+GNOME_KEYRING_CONTROL=/run/user/28920/keyring-vaBrC2
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
+DESKTOP_SESSION=gnome-classic
+DC_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-sVBNT47ULA,guid=dbd02011421ae7bced53682d5627a12d
+CVS_RSH=ssh
+COLORTERM=gnome-terminal
+AKLOG=/usr/bin/aklog
+0
+1
+1445442447 color_store.sv
+4
+0 
+1440744113 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
+1440743874 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+1440743866 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+1445442463 simv.daidir
