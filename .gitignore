@@ -1,0 +1,24 @@
+# Editor Backup Files
+*~
+.*.swp
+.*.swo
+
+# Generated Documentation Directory
+doc
+
+# Rust Compilation Directories
+target
+.fingerprint
+
+# Rust Compilation Files
+*.rlib
+
+# Ignore Python bytecode files
+*.pyc
+
+# Log files
+*.log
+
+*.o 
+.*
+lab1/project1_1/*
