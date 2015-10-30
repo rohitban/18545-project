@@ -1,0 +1,123 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+
+
+                              1 	;; Generic crt0.s for a Z80
+                              2         .module bintr_crt0
+                              3        	.globl	_main
+                              4         .globl  _isr
+                              5         .globl  _nmi_isr
+                              6 
+                              7 	.area _HEADER (ABS)
+                              8 	;; Reset vector
+   0000                       9 	.org 	0
+   0000 C3 00 01      [10]   10 	jp	init
+                             11 
+   0008                      12 	.org	0x08
+   0008 ED 4D         [14]   13 	reti
+   0010                      14 	.org	0x10
+   0010 ED 4D         [14]   15 	reti
+   0018                      16 	.org	0x18
+   0018 ED 4D         [14]   17 	reti
+   0020                      18 	.org	0x20
+   0020 ED 4D         [14]   19 	reti
+   0028                      20 	.org	0x28
+   0028 ED 4D         [14]   21 	reti
+   0030                      22 	.org	0x30
+   0030 ED 4D         [14]   23 	reti
+   0038                      24 	.org	0x38
+   0038 F3            [ 4]   25         di
+   0039 F5            [11]   26         push    af
+   003A CD 00 00      [17]   27         call _isr
+   003D F1            [10]   28         pop     af
+   003E FB            [ 4]   29         ei
+   003F ED 4D         [14]   30 	reti
+                             31 	
+   0066                      32         .org    0x66
+   0066 F5            [11]   33         push    af
+   0067 CD 00 00      [17]   34         call    _nmi_isr
+   006A F1            [10]   35         pop     af
+   006B ED 45         [14]   36         retn
+                             37         
+   0100                      38 	.org	0x100
+   0100                      39 init:
+                             40 	;; Stack at the top of memory.
+   0100 31 FF FF      [10]   41 	ld	sp,#0xffff        
+                             42 
+                             43     ;; enable interrupts
+   0103 ED 56         [ 8]   44         im      1
+   0105 FB            [ 4]   45         ei
+                             46     
+                             47         ;; Initialise global variables
+   0106 CD 00 00      [17]   48 	call	_main
+   0109 C3 04 00      [10]   49 	jp	_exit
+                             50 
+                             51 	;; Ordering of segments for the linker.
+                             52 	.area	_HOME
+                             53 	.area	_CODE
+                             54         .area   _GSINIT
+                             55         .area   _GSFINAL
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+
+
+                             56         
+                             57 	.area	_DATA
+                             58         .area   _BSS
+                             59         .area   _HEAP
+                             60 
+                             61         .area   _CODE
+   0000                      62 __clock::
+   0000 3E 02         [ 7]   63 	ld	a,#2
+   0002 CF            [11]   64         rst     0x08
+   0003 C9            [10]   65 	ret
+                             66 	
+   0004                      67 _exit::
+                             68 	;; Exit - special code to the emulator
+   0004 3E 00         [ 7]   69 	ld	a,#0
+   0006 CF            [11]   70         rst     0x08
+   0007                      71 1$:
+   0007 76            [ 4]   72 	halt
+   0008 18 FD         [12]   73 	jr	1$
+                             74 
+                             75         .area   _GSINIT
+   0000                      76 gsinit::	
+                             77 
+                             78         .area   _GSFINAL
+   0000 C9            [10]   79         ret
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 3.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
+    .__.H$L.=  0000 L   |   0 __clock    0000 GR  |   0 _exit      0004 GR
+    _isr       **** GX  |     _main      **** GX  |     _nmi_isr   **** GX
+  D gsinit     0000 GR  |   B init       0100 R
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 4.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE      size    A   flags    0
+   1 _HEADER    size    0   flags    8
+   2 _HEADER0   size    3   flags    8
+   3 _HEADER1   size    2   flags    8
+   4 _HEADER2   size    2   flags    8
+   5 _HEADER3   size    2   flags    8
+   6 _HEADER4   size    2   flags    8
+   7 _HEADER5   size    2   flags    8
+   8 _HEADER6   size    2   flags    8
+   9 _HEADER7   size    9   flags    8
+   A _HEADER8   size    7   flags    8
+   B _HEADER9   size    C   flags    8
+   C _HOME      size    0   flags    0
+   D _GSINIT    size    0   flags    0
+   E _GSFINAL   size    1   flags    0
+   F _DATA      size    0   flags    0
+  10 _BSS       size    0   flags    0
+  11 _HEAP      size    0   flags    0
+

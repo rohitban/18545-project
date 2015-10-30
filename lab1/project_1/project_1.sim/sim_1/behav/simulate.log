@@ -1,0 +1,8 @@
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+                   0 result=0000, num=  240, nxt=1, done=0
+                   5 result=00f0, num=    2, nxt=0, done=0
+                  15 result=00f0, num=    3, nxt=1, done=0
+                  25 result=00f3, num=    4, nxt=1, done=1
+                  35 result=00f7, num=    4, nxt=1, done=1
+$finish called at time : 45 ns : File "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm_test.sv" Line 41

@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Sep 21 11:41:04 2015
+# Process ID: 30751
+# Log file: /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/vivado.log
+# Journal file: /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/project_1 -part xc7a100tcsg324-3
+add_files {/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/uart /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/project_1 /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/core /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/wb_tv80 /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/app_localcfg}
+add_files -fileset constrs_1 -norecurse /afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1

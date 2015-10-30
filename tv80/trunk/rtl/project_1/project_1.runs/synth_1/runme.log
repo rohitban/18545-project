@@ -1,0 +1,697 @@
+
+*** Running vivado
+    with args -log simple_gmii_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source simple_gmii_top.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source simple_gmii_top.tcl -notrace
+Command: synth_design -top simple_gmii_top -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+WARNING: [Synth 8-2507] parameter declaration becomes local in simple_gmii_core with formal parameter declaration list [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:93]
+WARNING: [Synth 8-2507] parameter declaration becomes local in simple_gmii_core with formal parameter declaration list [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:94]
+WARNING: [Synth 8-2507] parameter declaration becomes local in simple_gmii_core with formal parameter declaration list [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:97]
+WARNING: [Synth 8-2507] parameter declaration becomes local in simple_gmii_core with formal parameter declaration list [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:102]
+WARNING: [Synth 8-2507] parameter declaration becomes local in simple_gmii_core with formal parameter declaration list [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:104]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1071.797 ; gain = 162.551 ; free physical = 4766 ; free virtual = 18736
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'simple_gmii_top' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_top.v:24]
+	Parameter txbuf_sz bound to: 512 - type: integer 
+	Parameter rxbuf_sz bound to: 512 - type: integer 
+	Parameter wr_ptr_sz bound to: 9 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'simple_gmii_core' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:45]
+	Parameter txbuf_sz bound to: 512 - type: integer 
+	Parameter rxbuf_sz bound to: 512 - type: integer 
+	Parameter wr_ptr_sz bound to: 9 - type: integer 
+	Parameter st_txi_idle bound to: 1'b0 
+	Parameter st_txi_xmit bound to: 1'b1 
+	Parameter st_txo_idle bound to: 2'b00 
+	Parameter st_txo_pre bound to: 2'b10 
+	Parameter st_txo_xmit bound to: 2'b11 
+	Parameter st_txo_wait bound to: 2'b01 
+	Parameter st_rxo_idle bound to: 2'b00 
+	Parameter st_rxo_ready bound to: 2'b01 
+	Parameter st_rxo_ack bound to: 2'b11 
+	Parameter st_rxin_idle bound to: 2'b00 
+	Parameter st_rxin_pre bound to: 2'b01 
+	Parameter st_rxin_receive bound to: 2'b11 
+	Parameter st_rxin_hold bound to: 2'b10 
+	Parameter SFD bound to: 8'b11010101 
+INFO: [Synth 8-638] synthesizing module 'sync2' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/sync2.v:27]
+INFO: [Synth 8-256] done synthesizing module 'sync2' (1#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/sync2.v:27]
+INFO: [Synth 8-226] default block is never used [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:169]
+INFO: [Synth 8-226] default block is never used [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:386]
+INFO: [Synth 8-226] default block is never used [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:437]
+INFO: [Synth 8-256] done synthesizing module 'simple_gmii_core' (2#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_core.v:45]
+INFO: [Synth 8-638] synthesizing module 'ram_1r_1w' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/ram_1r_1w.v:23]
+	Parameter width bound to: 8 - type: integer 
+	Parameter depth bound to: 512 - type: integer 
+	Parameter addr_sz bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ram_1r_1w' (3#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/ram_1r_1w.v:23]
+INFO: [Synth 8-638] synthesizing module 'simple_gmii_regs' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_regs.v:1]
+INFO: [Synth 8-256] done synthesizing module 'simple_gmii_regs' (4#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_regs.v:1]
+INFO: [Synth 8-256] done synthesizing module 'simple_gmii_top' (5#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/simple_gmii/simple_gmii_top.v:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1095.055 ; gain = 185.809 ; free physical = 4741 ; free virtual = 18712
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1095.055 ; gain = 185.809 ; free physical = 4742 ; free virtual = 18712
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:176]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:184]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:185]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:185]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:194]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:194]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:195]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:195]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:200]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:200]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:201]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc:201]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1445.625 ; gain = 0.000 ; free physical = 4461 ; free virtual = 18431
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4461 ; free virtual = 18431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4461 ; free virtual = 18431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4461 ; free virtual = 18431
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "nxt_rxin_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "txo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tx_data" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18425
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 4     
++---Registers : 
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   4 Input      9 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 17    
+	   2 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sync2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module simple_gmii_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 4     
++---Registers : 
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   4 Input      9 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 17    
+	   2 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module simple_gmii_regs 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18425
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "core0/txo_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5562] The signal rxbuf/mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (9 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[15]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[14]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[13]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[12]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[11]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[10]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[9]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port addr[8]
+WARNING: [Synth 8-3331] design simple_gmii_top has unconnected port rx_er
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18425
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18425
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-5562] The signal rxbuf/mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (9 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM rxbuf/mem_reg to conserve power
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++----------------+---------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------+
+|Module Name     | RTL Object    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name         | 
++----------------+---------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------+
+|simple_gmii_top | rxbuf/mem_reg | 512 x 8                | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | simple_gmii_top/extram__2 | 
++----------------+---------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------+
+
+Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
+Distributed RAM: 
++----------------+---------------+-----------+----------------------+------------------------------+------------------------+
+|Module Name     | RTL Object    | Inference | Size (Depth x Width) | Primitives                   | Hierarchical Name      | 
++----------------+---------------+-----------+----------------------+------------------------------+------------------------+
+|simple_gmii_top | txbuf/mem_reg | Implied   | 512 x 8              | RAM64X1D x 16  RAM64M x 16   | simple_gmii_top/ram__3 | 
++----------------+---------------+-----------+----------------------+------------------------------+------------------------+
+
+Note: The table shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the Distributed RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\core0/tx_er_reg )
+WARNING: [Synth 8-3332] Sequential element (\core0/tx_er_reg ) is unused and will be removed from module simple_gmii_top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18426
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18426
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4455 ; free virtual = 18426
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4453 ; free virtual = 18423
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5562] The signal rxbuf/mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (9 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4453 ; free virtual = 18423
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (i_488) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (i_489) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (i_490) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (i_491) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (i_492) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (i_493) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (i_494) is unused and will be removed from module simple_gmii_top.
+WARNING: [Synth 8-3332] Sequential element (\core0/rx_rd_ptr_reg[8] ) is unused and will be removed from module simple_gmii_top.
+INFO: [Synth 8-4480] The timing for the instance \rxbuf/mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4453 ; free virtual = 18423
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop regs0/status_int_reg is being inverted and renamed to regs0/status_int_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4452 ; free virtual = 18423
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4452 ; free virtual = 18423
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4452 ; free virtual = 18423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4452 ; free virtual = 18423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4452 ; free virtual = 18423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |CARRY4   |     2|
+|3     |LUT1     |     3|
+|4     |LUT2     |    19|
+|5     |LUT3     |    15|
+|6     |LUT4     |    43|
+|7     |LUT5     |    27|
+|8     |LUT6     |    71|
+|9     |MUXF7    |     5|
+|10    |RAM64M   |    16|
+|11    |RAM64X1D |    16|
+|12    |RAMB18E1 |     1|
+|13    |FDRE     |   110|
+|14    |FDSE     |     1|
+|15    |IBUF     |    32|
+|16    |OBUF     |    20|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------+-----------------+------+
+|      |Instance          |Module           |Cells |
++------+------------------+-----------------+------+
+|1     |top               |                 |   384|
+|2     |  core0           |simple_gmii_core |   225|
+|3     |    ack_sync      |sync2            |     4|
+|4     |    comp_sync     |sync2_1          |     2|
+|5     |    tx_done_sync  |sync2_2          |     6|
+|6     |    tx_start_sync |sync2_3          |     5|
+|7     |  regs0           |simple_gmii_regs |    42|
+|8     |  rxbuf           |ram_1r_1w        |     1|
+|9     |  txbuf           |ram_1r_1w_0      |    53|
++------+------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4452 ; free virtual = 18423
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1445.625 ; gain = 69.289 ; free physical = 4461 ; free virtual = 18432
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1445.625 ; gain = 536.379 ; free physical = 4461 ; free virtual = 18432
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 16 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 121 Warnings, 98 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1445.625 ; gain = 427.859 ; free physical = 4461 ; free virtual = 18432
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1477.645 ; gain = 0.000 ; free physical = 4459 ; free virtual = 18430
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 11:44:54 2015...

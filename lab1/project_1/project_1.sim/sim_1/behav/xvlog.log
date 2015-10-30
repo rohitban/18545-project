@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module sum_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sum_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
