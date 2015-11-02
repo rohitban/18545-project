@@ -1,0 +1,94 @@
+0 
+27
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags=
+-Mobjects= /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-gen_obj
+-picarchive
+-sverilog
+/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
+tv80_alu.v
+tv80_core.v
+tv80_mcode.v
+tv80_reg.v
+tv80_test.sv
+tv80n.v
+tv80s.v
+49
+sysc_uni_pwd=/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/core
+no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
+https_proxy=http://proximus.ece.cmu.edu:3128/
+http_proxy=http://proximus.ece.cmu.edu:3128/
+ftp_proxy=http://proximus.ece.cmu.edu:3128/
+XMODIFIERS=@im=ibus
+XILINX_DSP=/afs/ece/support/xilinx/xilinx.release/14.2/ISE_DS/ISE
+XILINX=/afs/ece/support/xilinx/xilinx.release/14.2/ISE_DS/ISE
+XDG_SESSION_ID=10824
+XDG_RUNTIME_DIR=/run/user/28952
+VMR_MODE_FLAG=32
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_LIC_EXPIRE_WARNING=0
+VCS_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=amd64
+UNAME=/bin/uname
+TOOL_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
+SYNOPSYS=/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys
+SSH_TTY=/dev/pts/3
+SSH_CONNECTION=128.2.100.188 50992 172.19.137.179 22
+SSH_CLIENT=128.2.100.188 50992 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PYTHONPATH=/afs/ece/class/ece447/bin:/afs/ece/class/ece447/bin:
+OVA_UUM=0
+NO_PROXY=localhost,127.0.0.1,.cmu.edu,.cmu.local
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=KEYRING:persistent:28952
+KDEDIRS=/usr
+HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
+HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
+HISTCONTROL=ignoredups
+FTP_PROXY=http://proximus.ece.cmu.edu:3128/
+CVS_RSH=ssh
+AKLOG=/usr/bin/aklog
+0
+7
+1443219363 tv80_test.sv
+1442788069 tv80s.v
+1442788069 tv80_reg.v
+1442788069 tv80n.v
+1442788069 tv80_mcode.v
+1442788069 tv80_core.v
+1442788069 tv80_alu.v
+4
+0 
+1440744113 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
+1440743874 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+1440743866 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
+1443219368 simv.daidir

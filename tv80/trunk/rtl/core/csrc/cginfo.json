@@ -1,0 +1,121 @@
+{
+    "Misc": {
+        "csrc_abs": "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/core/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/core",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/tv80/trunk/rtl/core/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.4"
+    },
+    "MlibObjs": {},
+    "CompileStrategy": "fullobj",
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 8742,
+                "mode": 4,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.4/_344949_archive_1.a"
+            }
+        },
+        "tv80n": {
+            "YpEHK_d": {
+                "bytes": 12962,
+                "mode": 4,
+                "mod": "tv80n",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "YpEHK_d.o"
+            }
+        },
+        "tv80s": {
+            "t54Px_d": {
+                "bytes": 13217,
+                "mode": 4,
+                "mod": "tv80s",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "t54Px_d.o"
+            }
+        },
+        "tb": {
+            "g7hgQ_d": {
+                "bytes": 13663,
+                "mode": 4,
+                "mod": "tb",
+                "out": "g7hgQ_d.o",
+                "archive": "archive.4/_344949_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mode": 4,
+                "mod": "std",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "tv80_core": {
+            "Yxj0r_d": {
+                "bytes": 180919,
+                "mode": 4,
+                "mod": "tv80_core",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "Yxj0r_d.o"
+            }
+        }
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileUdps": {},
+    "NameTable": {
+        "tb": [
+            "tb",
+            "g7hgQ",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "tv80_core": [
+            "tv80_core",
+            "Yxj0r",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "tv80n": [
+            "tv80n",
+            "YpEHK",
+            "module"
+        ],
+        "tv80s": [
+            "tv80s",
+            "t54Px",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "tb"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 61183
+    },
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.344949.json"
+    ],
+    "stat": {
+        "nMops": 359
+    },
+    "CompileStatus": "Successful"
+}

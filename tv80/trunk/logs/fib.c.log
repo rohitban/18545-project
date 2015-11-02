@@ -1,0 +1,34 @@
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Red Hat Enterprise Linux Server release 7.1 (Maipo)' is not 
+  supported on 'x86_64' officially, assuming linux compatibility by default. 
+  Set VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+
+Warning-[LINX_KRNL] Unsupported Linux kernel
+  Linux kernel '3.10.0-229.11.1.el7.x86_64' is not supported.
+  Supported versions are 2.4* or 2.6*.
+
+Command: vcs -full64 +v2k -R -I -f env/tb.vf +incdir+env -l logs/fib.c.log +define+DUMPFILE_NAME="logs/fib.c.dump" \
++define+ROM_FILE="tests/fib.c_rom.vmem" +define+RAM_FILE="tests/fib.c_ram.vmem"
+                         Chronologic VCS (TM)
+      Version J-2014.12-SP3-1_Full64 -- Mon Sep 21 11:11:42 2015
+               Copyright (c) 1991-2014 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file 'env/tb_top.v'
+
+Error-[UM] Undefined macro
+env/tb_top.v, 208
+  Undefined macro exists as: 'PROGRAM_FILE'   
+  "env/tb_top.v", 208: token is '`PROGRAM_FILE'
+        $readmemh (`PROGRAM_FILE,  tb_top.rom.mem);
+                                ^
+
+1 error
+CPU time: .065 seconds to compile

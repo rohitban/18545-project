@@ -1,0 +1,16 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /afs/ece/support/xilinx/xilinx.release/Vivado/bin/unwrapped/lnx64.o/xelab -wto bb8c95cd820b40798d26091eb45950b0 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sum_test_behav xil_defaultlib.sum_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/project_1/project_1.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.sum_fsm
+Compiling module xil_defaultlib.sum_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sum_test_behav

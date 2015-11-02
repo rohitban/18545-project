@@ -1,0 +1,406 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Sep 20 18:54:26 2015
+# Process ID: 18687
+# Log file: /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/project_1/project_1.runs/synth_1/top.vds
+# Journal file: /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/project_1/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1063.766 ; gain = 154.520 ; free physical = 7282 ; free virtual = 20676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/top.sv:2]
+INFO: [Synth 8-638] synthesizing module 'sum_fsm' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:22]
+INFO: [Synth 8-638] synthesizing module 'register' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:2]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register' (1#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:2]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:51]
+WARNING: [Synth 8-87] always_comb on 'ns_reg' did not result in combinational logic [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:53]
+INFO: [Synth 8-256] done synthesizing module 'sum_fsm' (2#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:22]
+INFO: [Synth 8-638] synthesizing module 'BCDtoSevenSegment' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/BCDtoSevenSegment.sv:3]
+INFO: [Synth 8-226] default block is never used [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/BCDtoSevenSegment.sv:8]
+INFO: [Synth 8-256] done synthesizing module 'BCDtoSevenSegment' (3#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/BCDtoSevenSegment.sv:3]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/top.sv:2]
+WARNING: [Synth 8-3331] design top has unconnected port led[15]
+WARNING: [Synth 8-3331] design top has unconnected port led[14]
+WARNING: [Synth 8-3331] design top has unconnected port led[13]
+WARNING: [Synth 8-3331] design top has unconnected port led[12]
+WARNING: [Synth 8-3331] design top has unconnected port led[11]
+WARNING: [Synth 8-3331] design top has unconnected port led[10]
+WARNING: [Synth 8-3331] design top has unconnected port led[9]
+WARNING: [Synth 8-3331] design top has unconnected port led[8]
+WARNING: [Synth 8-3331] design top has unconnected port led[7]
+WARNING: [Synth 8-3331] design top has unconnected port led[6]
+WARNING: [Synth 8-3331] design top has unconnected port led[5]
+WARNING: [Synth 8-3331] design top has unconnected port led[4]
+WARNING: [Synth 8-3331] design top has unconnected port led[3]
+WARNING: [Synth 8-3331] design top has unconnected port led[2]
+WARNING: [Synth 8-3331] design top has unconnected port led[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.055 ; gain = 190.809 ; free physical = 7243 ; free virtual = 20638
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin accum:clr to constant 0 [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:36]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.055 ; gain = 190.809 ; free physical = 7243 ; free virtual = 20638
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc]
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/xli2/Private/18545/Nexys4_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1441.508 ; gain = 0.000 ; free physical = 6966 ; free virtual = 20360
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6965 ; free virtual = 20360
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6965 ; free virtual = 20360
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6965 ; free virtual = 20360
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "ns" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'ns_reg' [/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/lab1/sum_fsm.sv:53]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20360
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 4     
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module sum_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+Module BCDtoSevenSegment 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20360
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design top has unconnected port led[15]
+WARNING: [Synth 8-3331] design top has unconnected port led[14]
+WARNING: [Synth 8-3331] design top has unconnected port led[13]
+WARNING: [Synth 8-3331] design top has unconnected port led[12]
+WARNING: [Synth 8-3331] design top has unconnected port led[11]
+WARNING: [Synth 8-3331] design top has unconnected port led[10]
+WARNING: [Synth 8-3331] design top has unconnected port led[9]
+WARNING: [Synth 8-3331] design top has unconnected port led[8]
+WARNING: [Synth 8-3331] design top has unconnected port led[7]
+WARNING: [Synth 8-3331] design top has unconnected port led[6]
+WARNING: [Synth 8-3331] design top has unconnected port led[5]
+WARNING: [Synth 8-3331] design top has unconnected port led[4]
+WARNING: [Synth 8-3331] design top has unconnected port led[3]
+WARNING: [Synth 8-3331] design top has unconnected port led[2]
+WARNING: [Synth 8-3331] design top has unconnected port led[1]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20360
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20360
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\accum/ns_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[31] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[30] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[29] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[28] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[27] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[26] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[25] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[24] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[23] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[22] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[21] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[20] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[19] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[18] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[17] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[16] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[15] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[14] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[13] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[12] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[11] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[10] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[9] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[8] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/cs_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[31] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[30] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[29] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[28] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[27] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[26] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[25] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[24] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[23] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[22] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[21] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[20] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[19] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[18] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[17] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[16] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[15] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[14] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[13] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[12] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[11] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[10] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[9] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[8] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\accum/ns_reg[2] ) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20359
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20359
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6964 ; free virtual = 20359
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     9|
+|4     |LUT2   |    18|
+|5     |LUT3   |     6|
+|6     |LUT4   |    28|
+|7     |LUT6   |     1|
+|8     |MUXF7  |    14|
+|9     |MUXF8  |     7|
+|10    |FDCE   |    27|
+|11    |FDPE   |     1|
+|12    |LD     |     2|
+|13    |IBUF   |    19|
+|14    |OBUF   |    16|
+|15    |OBUFT  |    15|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------+---------+------+
+|      |Instance  |Module   |Cells |
++------+----------+---------+------+
+|1     |top       |         |   168|
+|2     |  accum   |sum_fsm  |    94|
+|3     |    accum |register |    88|
++------+----------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 76 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1441.508 ; gain = 74.289 ; free physical = 6963 ; free virtual = 20358
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1441.508 ; gain = 532.262 ; free physical = 6963 ; free virtual = 20358
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1441.508 ; gain = 423.742 ; free physical = 6963 ; free virtual = 20358
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1473.527 ; gain = 0.000 ; free physical = 6962 ; free virtual = 20358
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 18:54:52 2015...

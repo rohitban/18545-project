@@ -1,0 +1,74 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Mon Sep 21 11:45:20 2015
+| Host         : amarillo.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
+| Command      : report_control_sets -verbose -file simple_gmii_top_control_sets_placed.rpt
+| Design       : simple_gmii_top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    21 |
+| Minimum Number of register sites lost to control set restrictions |    49 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              18 |           10 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              15 |            8 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              78 |           28 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------+-----------------------------+--------------------------+------------------+----------------+
+|    Clock Signal   |        Enable Signal        |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++-------------------+-----------------------------+--------------------------+------------------+----------------+
+|  tx_clk_IBUF_BUFG |                             | reset_IBUF               |                1 |              1 |
+|  tx_clk_IBUF_BUFG |                             |                          |                4 |              5 |
+|  rx_clk_IBUF_BUFG |                             |                          |                2 |              5 |
+|  clk_IBUF_BUFG    | core0/rx_rd_ptr_reg[7]_0    | core0/rx_rd_ptr_reg[0]_0 |                4 |              8 |
+|  tx_clk_IBUF_BUFG | core0/tx_data[7]_i_1_n_0    | reset_IBUF               |                3 |              8 |
+|  clk_IBUF_BUFG    |                             |                          |                4 |              8 |
+|  clk_IBUF_BUFG    | regs0/tx_data_wr_sel        | reset_IBUF               |                4 |              8 |
+|  clk_IBUF_BUFG    | regs0/E[0]                  | core0/tx_done_sync/SR[0] |                3 |              9 |
+|  clk_IBUF_BUFG    | core0/rx_count[8]_i_1_n_0   | reset_IBUF               |                3 |              9 |
+|  tx_clk_IBUF_BUFG | core0/tx_start_sync/E[0]    | reset_IBUF               |                3 |              9 |
+|  rx_clk_IBUF_BUFG | core0/rx_wr_ptr[8]_i_1_n_0  | reset_IBUF               |                2 |              9 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_0      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_1      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_2      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_3      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_4      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_5      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_6      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    | core0/tx_data_reg[6]_7      |                          |                3 |             12 |
+|  clk_IBUF_BUFG    |                             | reset_IBUF               |                7 |             14 |
+|  tx_clk_IBUF_BUFG | core0/txo_xm_ptr[8]_i_1_n_0 | reset_IBUF               |                6 |             18 |
++-------------------+-----------------------------+--------------------------+------------------+----------------+
+
+

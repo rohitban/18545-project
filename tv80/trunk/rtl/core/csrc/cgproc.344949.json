@@ -1,0 +1,45 @@
+{
+    "Modules": {
+        "tv80n": {},
+        "...MASTER...": {},
+        "tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "std": {},
+        "tv80_core": {},
+        "tv80s": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 8742,
+            "archive": "archive.4/_344949_archive_1.a"
+        },
+        "g7hgQ_d": {
+            "mode": 4,
+            "mod": "tb",
+            "out": "g7hgQ_d.o",
+            "bytes": 13663,
+            "archive": "archive.4/_344949_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.4/_344949_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    8742
+                ],
+                [
+                    "g7hgQ_d.o",
+                    13663
+                ]
+            ],
+            "size": 22405
+        }
+    ]
+}
