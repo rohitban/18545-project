@@ -49,12 +49,12 @@ module video_top
     assign vgaBlue = (row_ok&col_ok)?blue:4'hF;
     /////////////////////////////////////////
 
-    /*
-    clk_wiz_0 clk_div(.clk_in1(clk),
-                     .reset(rst),
-                     .clk_out1(clk_400),
-                     .locked( ));
-    */
+    
+    clk_400MHz clk_div(.clk_in1(clk),
+                       .reset(rst),
+                       .clk_out1(clk_400),
+                       .locked( ));
+    
 
     vga_ctrl v1(.clk,
                 .reset(rst),
@@ -73,7 +73,7 @@ module video_top
     */
     
     
-    tile_block tb(.clk,//(clk_400),
+    tile_block tb(.clk(clk_400),//(clk_400),
                  .rst(rst),
 
                  //Get ROM addrs as inputs
