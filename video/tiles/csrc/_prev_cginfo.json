@@ -1,0 +1,148 @@
+{
+    "CurCompileUdps": {},
+    "stat": {
+        "nMops": 5350
+    },
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.1/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "bytes": 8432,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "archive": "archive.1/_7009_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "red_blue": [
+            "red_blue",
+            "pscrk",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ],
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "color_band": [
+            "color_band",
+            "H67tu",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "video_top": [
+            "video_top",
+            "S15Q4",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CompileStatus": "Successful",
+    "CurCompileModules": [
+        "...MASTER...",
+        "adder",
+        "mux",
+        "mux2to1",
+        "mux4to1",
+        "decoder",
+        "register",
+        "sync_register",
+        "shift_register",
+        "counter",
+        "BCD_counter",
+        "offset_check",
+        "video_top",
+        "red_blue",
+        "color_band"
+    ],
+    "SIMBData": {
+        "bytes": 58951,
+        "out": "amcQwB.o"
+    },
+    "CompileProcesses": [
+        "cgproc.7009.json"
+    ],
+    "PEModules": [],
+    "LVLData": [
+        "SIM"
+    ],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/video/tiles",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/video/tiles/csrc",
+        "archive_dir": "archive.1",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/video/tiles/simv.daidir"
+    }
+}

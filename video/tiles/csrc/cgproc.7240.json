@@ -1,0 +1,41 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "sync_register": {},
+        "std": {},
+        "mux": {},
+        "adder": {},
+        "mux4to1": {},
+        "video_top": {},
+        "offset_check": {},
+        "counter": {},
+        "mux2to1": {},
+        "color_band": {},
+        "decoder": {},
+        "register": {},
+        "red_blue": {},
+        "shift_register": {},
+        "BCD_counter": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 12595,
+            "archive": "archive.2/_7240_archive_1.a",
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.2/_7240_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    12595
+                ]
+            ],
+            "size": 12595
+        }
+    ]
+}

@@ -1,0 +1,260 @@
+{
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 57831
+    },
+    "MlibObjs": {},
+    "CompileStatus": "Successful",
+    "PrevCompiledModules": {
+        "shift_register": {
+            "JPGqC_d": {
+                "bytes": 7736,
+                "mod": "shift_register",
+                "out": "JPGqC_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "red_blue": {
+            "pscrk_d": {
+                "bytes": 8531,
+                "mod": "red_blue",
+                "out": "pscrk_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "adder": {
+            "Qq4Ev_d": {
+                "bytes": 7484,
+                "mod": "adder",
+                "out": "Qq4Ev_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "mux4to1": {
+            "HmmeF_d": {
+                "bytes": 8203,
+                "mod": "mux4to1",
+                "out": "HmmeF_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "video_top": {
+            "S15Q4_d": {
+                "bytes": 27500,
+                "mod": "video_top",
+                "out": "S15Q4_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "counter": {
+            "MQn6b_d": {
+                "bytes": 7855,
+                "mod": "counter",
+                "out": "MQn6b_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "mux2to1": {
+            "TDywx_d": {
+                "bytes": 6683,
+                "mod": "mux2to1",
+                "out": "TDywx_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "offset_check": {
+            "SZ5kb_d": {
+                "bytes": 7501,
+                "mod": "offset_check",
+                "out": "SZ5kb_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "sync_register": {
+            "mGx3r_d": {
+                "bytes": 7445,
+                "mod": "sync_register",
+                "out": "mGx3r_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "BCD_counter": {
+            "A0ABL_d": {
+                "bytes": 8909,
+                "mod": "BCD_counter",
+                "out": "A0ABL_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "register": {
+            "DAC4W_d": {
+                "bytes": 7956,
+                "mod": "register",
+                "out": "DAC4W_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 12595,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.2/_7240_archive_1.a",
+                "mode": 4
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "bytes": 6328,
+                "mod": "mux",
+                "out": "RZvU4_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "color_band": {
+            "H67tu_d": {
+                "bytes": 8649,
+                "mod": "color_band",
+                "out": "H67tu_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "decoder": {
+            "zf0bY_d": {
+                "bytes": 7927,
+                "mod": "decoder",
+                "out": "zf0bY_d.o",
+                "archive": "archive.2/_prev_archive_1.a",
+                "mode": 4
+            }
+        }
+    },
+    "CurCompileModules": [
+        "...MASTER..."
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.7240.json"
+    ],
+    "NameTable": {
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ],
+        "video_top": [
+            "video_top",
+            "S15Q4",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ],
+        "color_band": [
+            "color_band",
+            "H67tu",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "register": [
+            "register",
+            "DAC4W",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
+        "red_blue": [
+            "red_blue",
+            "pscrk",
+            "module"
+        ],
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileUdps": {},
+    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "Misc": {
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/video/tiles/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/video/tiles",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/video/tiles/simv.daidir",
+        "archive_dir": "archive.2",
+        "default_output_dir": "csrc"
+    },
+    "stat": {
+        "nMops": 43
+    }
+}
