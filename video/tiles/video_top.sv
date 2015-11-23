@@ -27,6 +27,7 @@ module video_top
     logic [9:0] col;
     logic [8:0] row;
     logic       blank;
+    logic       hblank, vblank;
     //logic       clk_400;
 
     
@@ -62,6 +63,8 @@ module video_top
                 .VS(Vsync),
                 .row,
                 .col,
+                .hblank,
+                .vblank,
                 .blank);
 
     /*
@@ -86,6 +89,7 @@ module video_top
 
                  .row,
                  .col,
+                 .blank,
 
                  .red,
                  .blue,

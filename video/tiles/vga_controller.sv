@@ -46,7 +46,7 @@
 
 module vga_ctrl
   (input  logic clk, reset,
-   output logic HS, VS, blank,
+   output logic HS, VS, blank,vblank,hblank,
    //output logic [11:0] hs_count,
    //output logic [9:0] vs_count,
    output logic [8:0] row,
@@ -72,7 +72,11 @@ module vga_ctrl
   assign vs_disp = `VS_DISP_LOW <= vs_count && vs_count < `VS_DISP_HI;
 
   assign blank = ~(hs_disp && vs_disp);
+  
+  assign vblank = ~vs_disp;
 
+  assign hblank = ~hs_disp;
+  
   assign HS = `HS_LOW <= hs_count && hs_count < `HS_LIM;
   assign VS = `VS_LOW <= vs_count && vs_count < `VS_LIM;
 
