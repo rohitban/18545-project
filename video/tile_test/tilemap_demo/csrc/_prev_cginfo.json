@@ -1,0 +1,50 @@
+{
+    "CompileProcesses": [
+        "cgproc.3635330.json"
+    ],
+    "stat": {
+        "nMops": 1098
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "dr_demo": [
+            "dr_demo",
+            "s1t8a",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStatus": "Successful",
+    "CompileStrategy": "fullobj",
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58169
+    },
+    "Misc": {
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/tilemap_demo/simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/tilemap_demo",
+        "csrc": "csrc",
+        "archive_dir": "archive.0",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/545/video/tilemap/tilemap_demo/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "dr_demo"
+    ],
+    "PEModules": []
+}
