@@ -1,0 +1,55 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "mux": {},
+        "sync_register": {},
+        "mux4to1": {},
+        "comparator": {},
+        "std": {},
+        "sample_test": {
+            "Compiled Times": 3,
+            "Compiled": "Yes"
+        },
+        "sound_reg_0000": {},
+        "mux2to1": {},
+        "adder": {},
+        "offset_check": {},
+        "decoder": {},
+        "limit_counter": {},
+        "counter": {},
+        "shift_register": {},
+        "BCD_counter": {}
+    },
+    "CompUnits": {
+        "EIPZ6_d": {
+            "mod": "sample_test",
+            "mode": 4,
+            "bytes": 69034,
+            "out": "EIPZ6_d.o",
+            "archive": "archive.11/_1810339_archive_1.a"
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "mode": 4,
+            "bytes": 11099,
+            "out": "amcQw_d.o",
+            "archive": "archive.11/_1810339_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.11/_1810339_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11099
+                ],
+                [
+                    "EIPZ6_d.o",
+                    69034
+                ]
+            ],
+            "size": 80133
+        }
+    ]
+}

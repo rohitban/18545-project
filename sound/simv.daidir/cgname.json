@@ -1,0 +1,82 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "sample_test": [
+        "sample_test",
+        "EIPZ6",
+        "module"
+    ],
+    "sound_reg_0000": [
+        "sound_reg_0000",
+        "JZ5h3",
+        "module"
+    ],
+    "sync_register": [
+        "sync_register",
+        "mGx3r",
+        "module"
+    ],
+    "comparator": [
+        "comparator",
+        "U57Qt",
+        "module"
+    ],
+    "mux4to1": [
+        "mux4to1",
+        "HmmeF",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "mux": [
+        "mux",
+        "RZvU4",
+        "module"
+    ],
+    "mux2to1": [
+        "mux2to1",
+        "TDywx",
+        "module"
+    ],
+    "adder": [
+        "adder",
+        "Qq4Ev",
+        "module"
+    ],
+    "offset_check": [
+        "offset_check",
+        "SZ5kb",
+        "module"
+    ],
+    "decoder": [
+        "decoder",
+        "zf0bY",
+        "module"
+    ],
+    "limit_counter": [
+        "limit_counter",
+        "kIF6S",
+        "module"
+    ],
+    "counter": [
+        "counter",
+        "MQn6b",
+        "module"
+    ],
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
+        "module"
+    ],
+    "BCD_counter": [
+        "BCD_counter",
+        "A0ABL",
+        "module"
+    ]
+}

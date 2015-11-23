@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=sample_test comparator adder mux mux2to1 mux4to1 decoder sync_register shift_register counter limit_counter BCD_counter offset_check 

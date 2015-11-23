@@ -1,0 +1,49 @@
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  Q[(0 * 4):((0 * 4) + 3)]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  fa[0][0:3]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  Q[(1 * 4):((1 * 4) + 3)]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  fa[1][0:3]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  Q[(2 * 4):((2 * 4) + 3)]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  fa[2][0:3]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  Q[(3 * 4):((3 * 4) + 3)]
+
+
+Error-[IRIPS] Illegal range in part select
+sample_selector.sv, 22
+  The range of the part select is illegal:
+  fa[3][0:3]
+
+8 errors

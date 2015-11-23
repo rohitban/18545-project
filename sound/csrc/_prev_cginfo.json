@@ -1,0 +1,275 @@
+{
+    "CompileProcesses": [
+        "cgproc.1808480.json"
+    ],
+    "MlibObjs": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "sample_test": [
+            "sample_test",
+            "EIPZ6",
+            "module"
+        ],
+        "mux": [
+            "mux",
+            "RZvU4",
+            "module"
+        ],
+        "sound_reg_0000": [
+            "sound_reg_0000",
+            "JZ5h3",
+            "module"
+        ],
+        "adder": [
+            "adder",
+            "Qq4Ev",
+            "module"
+        ],
+        "comparator": [
+            "comparator",
+            "U57Qt",
+            "module"
+        ],
+        "mux2to1": [
+            "mux2to1",
+            "TDywx",
+            "module"
+        ],
+        "limit_counter": [
+            "limit_counter",
+            "kIF6S",
+            "module"
+        ],
+        "mux4to1": [
+            "mux4to1",
+            "HmmeF",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "decoder": [
+            "decoder",
+            "zf0bY",
+            "module"
+        ],
+        "sync_register": [
+            "sync_register",
+            "mGx3r",
+            "module"
+        ],
+        "BCD_counter": [
+            "BCD_counter",
+            "A0ABL",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
+        "offset_check": [
+            "offset_check",
+            "SZ5kb",
+            "module"
+        ],
+        "counter": [
+            "counter",
+            "MQn6b",
+            "module"
+        ]
+    },
+    "PEModules": [],
+    "PrevCompiledModules": {
+        "adder": {
+            "Qq4Ev_d": {
+                "bytes": 7484,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "adder",
+                "mode": 4,
+                "out": "Qq4Ev_d.o"
+            }
+        },
+        "limit_counter": {
+            "kIF6S_d": {
+                "bytes": 7701,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "limit_counter",
+                "mode": 4,
+                "out": "kIF6S_d.o"
+            }
+        },
+        "mux2to1": {
+            "TDywx_d": {
+                "bytes": 6683,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "mux2to1",
+                "mode": 4,
+                "out": "TDywx_d.o"
+            }
+        },
+        "sync_register": {
+            "mGx3r_d": {
+                "bytes": 7445,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "sync_register",
+                "mode": 4,
+                "out": "mGx3r_d.o"
+            }
+        },
+        "sound_reg_0000": {
+            "JZ5h3_d": {
+                "bytes": 16744,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "sound_reg_0000",
+                "mode": 4,
+                "out": "JZ5h3_d.o"
+            }
+        },
+        "counter": {
+            "MQn6b_d": {
+                "bytes": 7855,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "counter",
+                "mode": 4,
+                "out": "MQn6b_d.o"
+            }
+        },
+        "offset_check": {
+            "SZ5kb_d": {
+                "bytes": 7501,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "offset_check",
+                "mode": 4,
+                "out": "SZ5kb_d.o"
+            }
+        },
+        "mux": {
+            "RZvU4_d": {
+                "bytes": 6328,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "mux",
+                "mode": 4,
+                "out": "RZvU4_d.o"
+            }
+        },
+        "sample_test": {
+            "EIPZ6_d": {
+                "bytes": 40669,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "sample_test",
+                "out": "EIPZ6_d.o",
+                "mode": 4
+            }
+        },
+        "mux4to1": {
+            "HmmeF_d": {
+                "bytes": 8203,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "mux4to1",
+                "mode": 4,
+                "out": "HmmeF_d.o"
+            }
+        },
+        "shift_register": {
+            "JPGqC_d": {
+                "bytes": 7736,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "shift_register",
+                "mode": 4,
+                "out": "JPGqC_d.o"
+            }
+        },
+        "BCD_counter": {
+            "A0ABL_d": {
+                "bytes": 8909,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "BCD_counter",
+                "mode": 4,
+                "out": "A0ABL_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "decoder": {
+            "zf0bY_d": {
+                "bytes": 7927,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "decoder",
+                "mode": 4,
+                "out": "zf0bY_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 11187,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "comparator": {
+            "U57Qt_d": {
+                "bytes": 6658,
+                "archive": "archive.10/_1808480_archive_1.a",
+                "mod": "comparator",
+                "mode": 4,
+                "out": "U57Qt_d.o"
+            }
+        }
+    },
+    "Misc": {
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound/csrc",
+        "csrc": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.10",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "CompileStrategy": "fullobj",
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 93060
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "sample_test",
+        "sound_reg_0000",
+        "comparator",
+        "adder",
+        "mux",
+        "mux2to1",
+        "mux4to1",
+        "decoder",
+        "sync_register",
+        "shift_register",
+        "counter",
+        "limit_counter",
+        "BCD_counter",
+        "offset_check"
+    ],
+    "CompileStatus": "Successful",
+    "stat": {
+        "nMops": 9431
+    }
+}
