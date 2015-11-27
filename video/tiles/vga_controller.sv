@@ -57,13 +57,13 @@ module vga_ctrl
   logic [9:0] vs_count;
   logic col_inc, row_inc;
 
-  limit_counter #(12) hscount(.clk(clk),.en(1'b1),.clr(reset),
+  limit_counter #(12,0) hscount(.clk(clk),.en(1'b1),.clr(reset),.rst(reset),
                               .limit(`HS_LIM),.Q(hs_count));
 
   comparator #(12) hscmp(.A(hs_count),.B(`HS_LIM),.AeqB(vs_inc),
                          .AgtB( ),.AltB( ));
 
-  limit_counter #(10) vscount(.clk(clk),.en(vs_inc),.clr(reset),
+  limit_counter #(10,31) vscount(.clk(clk),.en(vs_inc),.clr(reset),.rst(reset),
                               .limit(`VS_LIM),.Q(vs_count));
 
   assign hs_disp = `HS_DISP_LOW <= hs_count && hs_count < `HS_DISP_HI; 
@@ -82,12 +82,12 @@ module vga_ctrl
 
   assign col_inc = ((hs_count[1:0] & 2'b11)==2'b11)?hs_disp:1'b0;
 
-  limit_counter #(10) colcount(.clk(clk),.en(col_inc),.clr(reset),
+  limit_counter #(10,0) colcount(.clk(clk),.en(col_inc),.clr(reset),.rst(reset),
                                .limit(`TOTAL_COLS-10'd1),.Q(col));
 
   assign row_inc = (vs_disp && vs_inc);
 
-  limit_counter #(9) rowcount(.clk(clk),.en(row_inc),.clr(reset),
+  limit_counter #(9,0) rowcount(.clk(clk),.en(row_inc),.clr(reset),.rst(reset),
                                .limit(`TOTAL_ROWS-9'd1),.Q(row));
 
 

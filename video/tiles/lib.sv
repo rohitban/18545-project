@@ -353,14 +353,16 @@ module counter
 endmodule: counter
 
 module limit_counter
- #(parameter w = 4)
+ #(parameter w = 4, init = 0)
   (input  logic clk,
-   input  logic en,clr,
+   input  logic en,clr,rst,
    input  logic [w-1:0] limit,
    output logic [w-1:0] Q);
 
-  always_ff @(posedge clk)
-    if (clr)
+  always_ff @(posedge rst, posedge clk)
+    if(rst)
+      Q <= init;
+    else if (clr)
       Q <= 0;
     else if (en)
       begin
