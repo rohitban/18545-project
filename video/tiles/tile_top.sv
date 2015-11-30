@@ -1,6 +1,10 @@
-`define TILE_MEM_OFFSET 16'h4020
+`define TILE_MEM_OFFSET 16'h4000
 `define PALETTE_MEM_OFFSET 16'h4400
 
+
+`define PAC_ROW_MAX 9'd288
+
+`define PAC_COL_MAX 10'd224
 
 `include "color_store.sv"
 `include "pixel_num.sv"
@@ -26,6 +30,16 @@ module tile_block
 
     
     //Access RAM
+
+    //Output 0 addrs if out of range
+    logic row_ok, col_ok;
+    logic in_range;
+
+    assign row_ok = (0 <= row) && (row<`PAC_ROW_MAX);
+    assign col_ok = (0 <= col) && (col<`PAC_COL_MAX);
+
+    assign in_range = row_ok && col_ok;
+
     logic [15:0] raw_addr;
     
     tilemap_addr_dcd addr(.row,
@@ -38,8 +52,8 @@ module tile_block
     
     assign palette_RAM_raw = `PALETTE_MEM_OFFSET + raw_addr;
     
-    assign tile_RAM_addr = (blank)?16'h0:tile_RAM_raw;
-    assign palette_RAM_addr = (blank)?16'h0:palette_RAM_raw;
+    assign tile_RAM_addr = (blank||~in_range)?16'h0:tile_RAM_raw;
+    assign palette_RAM_addr = (blank||~in_range)?16'h0:palette_RAM_raw;
 
     //Now determine the pixel number
 
@@ -61,13 +75,12 @@ module tile_block
     logic [7:0] tile_byte;// accessed from tile rom
    
    
-    /*
+    
     tile_rom t_rom(.addra(pix_addr),
                    .clka(clk),
                    .douta(tile_byte));
-    */
-    assign tile_byte = 0;//TODO: make rom output
     
+        
 
     logic [1:0] pixel_data;
 
@@ -84,13 +97,10 @@ module tile_block
     
     //Large palette ROM
     
-    /*
+    
     palette_4byte_rom p4_rom(.clka(clk),
                              .addra(palette_index),
                              .douta(palette));
-    */
-
-    assign palette = 1;//TODO: make rom output
 
     palette_mux pmux(.palette,
                      .pixel_data,
