@@ -24,6 +24,17 @@ module video_top
      output logic [3:0] vgaRed, vgaGreen, vgaBlue,
      output logic       Hsync, Vsync);
 
+    //TEST
+//    logic [7:0] tile_ROM_addr;
+//    logic [15:0] tile_RAM_addr;
+    
+//    logic [5:0] palette_ROM_addr;
+//    logic [15:0] palette_RAM_addr;
+    
+//    logic rst;
+    
+//    assign rst = btnC;
+    ////////////
     logic [9:0] col;
     logic [8:0] row;
     logic       blank;
@@ -48,14 +59,18 @@ module video_top
     assign vgaRed = (row_ok&col_ok)?red:4'hF;
     assign vgaGreen = (row_ok&col_ok)?green:4'hF;
     assign vgaBlue = (row_ok&col_ok)?blue:4'hF;
+    
+    /*
+    assign vgaRed = 4'h0;
+    assign vgaGreen = ('d10 <= row && row < 'd400)?4'hF:0;
+    assign vgaBlue = 4'h0;
+    */
     /////////////////////////////////////////
 
-    
+    /*
     clk_400MHz clk_div(.clk_in1(clk),
-                       .reset(rst),
-                       .clk_out1(clk_400),
-                       .locked( ));
-    
+                       .clk_out1(clk_400));
+    */
 
     vga_ctrl v1(.clk,
                 .reset(rst),
@@ -76,7 +91,7 @@ module video_top
     */
     
     
-    tile_block tb(.clk(clk_400),//(clk_400),
+    tile_block tb(.clk,//(clk_400),
                  .rst(rst),
 
                  //Get ROM addrs as inputs
@@ -89,6 +104,7 @@ module video_top
 
                  .row(off_row),
                  .col(off_col),
+
                  .blank,
 
                  .red,
@@ -103,6 +119,25 @@ module video_top
                    .VGA_G(vgaGreen));
     */              
 endmodule: video_top
+
+module adjustVGA
+    (input  logic [9:0] col,
+    input  logic [8:0] row,
+    input  logic [3:0] r, g, b,
+    output logic [3:0] vgaRed,vgaBlue,vgaGreen);
+
+    logic valid_row;
+    logic valid_col;
+    
+    assign valid_col = (0 <= col && col < 'd639);
+    
+    assign valid_row = (0 <= col && col < 'd470);
+    
+    assign vgaRed = (valid_row&&valid_col)?r:4'h0;
+    assign vgaGreen = (valid_row&&valid_col)?g:4'h0;
+    assign vgaBlue = (valid_row&&valid_col)?b:4'h0;
+    
+endmodule: adjustVGA
 
 module red_blue
   (input  logic [9:0] col,

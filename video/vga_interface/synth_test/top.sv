@@ -7,6 +7,7 @@ module top
 
     logic [9:0] col;
     logic [8:0] row;
+    logic       blank;
 
 
     vga_ctrl v1(.clk,
@@ -14,7 +15,8 @@ module top
                 .HS(Hsync),
                 .VS(Vsync),
                 .row,
-                .col);
+                .col,
+                .blank);
 
     red_blue rb(.row,
                 .col,
@@ -29,24 +31,21 @@ module red_blue
    input  logic [8:0] row,
    output logic [3:0] VGA_R,VGA_B,VGA_G);
 	
-	logic l,r,t,b;
+	logic left, right, top, bottom;
 	
-	range_check #(10) left(.val(col),.low(10'd0),.high(10'd319),
-	                          .in_between(l));
+	assign left = 10'd0 <= col < 10'd320;
 	
-	range_check #(9) top(.val(row),.low(9'd0),.high(9'd239),
-	                          .in_between(t));
+	assign right = 10'd320 <= col < 10'd640;
 	
-	range_check #(10) right(.val(col),.low(10'd320),.high(10'd639),
-	                          .in_between(r));
+	assign top = 9'd0 <= row < 9'd240;
 	
-	range_check #(9) bottom(.val(row),.low(9'd240),.high(9'd479),
-	                          .in_between(b));
+	assign bottom = 9'd240 <= row < 9'd480;
 	
-	
-	assign VGA_R = (t&&l || b&&r)?4'hF:4'h0;
-	assign VGA_B = (t&&r || b&&l)?4'hF:4'h0;
-	assign VGA_G = 8'h00;
+	//assign VGA_R = (top&&left || bottom&&right)?4'hF:4'h0;
+	//assign VGA_B = (top&&right || bottom&&left)?4'hF:4'h0;
+	assign VGA_R = 4'hF;
+	assign VGA_B = 4'h0;
+	assign VGA_G = 4'h0;
 	
 endmodule: red_blue
 

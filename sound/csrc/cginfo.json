@@ -1,261 +1,70 @@
 {
     "MlibObjs": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.14/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "bytes": 7837,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "archive": "archive.14/_2151877_archive_1.a"
+            }
+        }
+    },
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "sound_reg_0000": [
-            "sound_reg_0000",
-            "JZ5h3",
-            "module"
-        ],
-        "sample_test": [
-            "sample_test",
-            "EIPZ6",
-            "module"
-        ],
-        "mux4to1": [
-            "mux4to1",
-            "HmmeF",
-            "module"
-        ],
-        "comparator": [
-            "comparator",
-            "U57Qt",
-            "module"
-        ],
-        "sync_register": [
-            "sync_register",
-            "mGx3r",
-            "module"
-        ],
-        "mux": [
-            "mux",
-            "RZvU4",
+        "PWM_controller": [
+            "PWM_controller",
+            "s8WPe",
             "module"
         ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
-        ],
-        "mux2to1": [
-            "mux2to1",
-            "TDywx",
-            "module"
-        ],
-        "adder": [
-            "adder",
-            "Qq4Ev",
-            "module"
-        ],
-        "decoder": [
-            "decoder",
-            "zf0bY",
-            "module"
-        ],
-        "offset_check": [
-            "offset_check",
-            "SZ5kb",
-            "module"
-        ],
-        "limit_counter": [
-            "limit_counter",
-            "kIF6S",
-            "module"
-        ],
-        "shift_register": [
-            "shift_register",
-            "JPGqC",
-            "module"
-        ],
-        "counter": [
-            "counter",
-            "MQn6b",
-            "module"
-        ],
-        "BCD_counter": [
-            "BCD_counter",
-            "A0ABL",
-            "module"
         ]
     },
-    "Misc": {
-        "archive_dir": "archive.11",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound/csrc",
-        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound",
-        "default_output_dir": "csrc",
-        "csrc": "csrc",
-        "daidir": "simv.daidir",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound/simv.daidir"
-    },
-    "PrevCompiledModules": {
-        "mux2to1": {
-            "TDywx_d": {
-                "mode": 4,
-                "out": "TDywx_d.o",
-                "bytes": 6736,
-                "mod": "mux2to1",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "adder": {
-            "Qq4Ev_d": {
-                "mode": 4,
-                "out": "Qq4Ev_d.o",
-                "bytes": 7533,
-                "mod": "adder",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "comparator": {
-            "U57Qt_d": {
-                "mode": 4,
-                "out": "U57Qt_d.o",
-                "bytes": 6771,
-                "mod": "comparator",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "sync_register": {
-            "mGx3r_d": {
-                "mode": 4,
-                "out": "mGx3r_d.o",
-                "bytes": 8539,
-                "mod": "sync_register",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "mux4to1": {
-            "HmmeF_d": {
-                "mode": 4,
-                "out": "HmmeF_d.o",
-                "bytes": 8988,
-                "mod": "mux4to1",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "sound_reg_0000": {
-            "JZ5h3_d": {
-                "mode": 4,
-                "out": "JZ5h3_d.o",
-                "bytes": 36293,
-                "mod": "sound_reg_0000",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "sample_test": {
-            "EIPZ6_d": {
-                "mode": 4,
-                "out": "EIPZ6_d.o",
-                "bytes": 69034,
-                "mod": "sample_test",
-                "archive": "archive.11/_1810339_archive_1.a"
-            }
-        },
-        "decoder": {
-            "zf0bY_d": {
-                "mode": 4,
-                "out": "zf0bY_d.o",
-                "bytes": 8616,
-                "mod": "decoder",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "offset_check": {
-            "SZ5kb_d": {
-                "mode": 4,
-                "out": "SZ5kb_d.o",
-                "bytes": 10069,
-                "mod": "offset_check",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "BCD_counter": {
-            "A0ABL_d": {
-                "mode": 4,
-                "out": "A0ABL_d.o",
-                "bytes": 13047,
-                "mod": "BCD_counter",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "mode": 4,
-                "out": "reYIK_d.o",
-                "bytes": 34314,
-                "mod": "std",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "shift_register": {
-            "JPGqC_d": {
-                "mode": 4,
-                "out": "JPGqC_d.o",
-                "bytes": 8500,
-                "mod": "shift_register",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "limit_counter": {
-            "kIF6S_d": {
-                "mode": 4,
-                "out": "kIF6S_d.o",
-                "bytes": 8791,
-                "mod": "limit_counter",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "counter": {
-            "MQn6b_d": {
-                "mode": 4,
-                "out": "MQn6b_d.o",
-                "bytes": 8965,
-                "mod": "counter",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "mux": {
-            "RZvU4_d": {
-                "mode": 4,
-                "out": "RZvU4_d.o",
-                "bytes": 6808,
-                "mod": "mux",
-                "archive": "archive.11/_prev_archive_1.a"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "mode": 4,
-                "out": "amcQw_d.o",
-                "bytes": 11099,
-                "mod": "...MASTER...",
-                "archive": "archive.11/_1810339_archive_1.a"
-            }
-        }
-    },
     "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
     "LVLData": [
         "SIM"
     ],
+    "CurCompileUdps": {},
     "SIMBData": {
-        "bytes": 91587,
+        "bytes": 59066,
         "out": "amcQwB.o"
+    },
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound/csrc",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/rohitban/Private/18545-project/sound/simv.daidir",
+        "archive_dir": "archive.14"
     },
     "CurCompileModules": [
         "...MASTER...",
-        "sample_test"
+        "PWM_controller"
     ],
     "PEModules": [],
     "CompileProcesses": [
-        "cgproc.1810339.json"
+        "cgproc.2151877.json"
     ],
     "stat": {
-        "nMops": 4426
+        "nMops": 213
     },
     "CompileStatus": "Successful"
 }

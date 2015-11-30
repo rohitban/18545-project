@@ -39,6 +39,8 @@ def createTileCoe(filename):
 		line = line.rstrip("\n")
 		line = line.replace(" ","")
 		
+		line = hex(int(line))[2:]
+
 		value_string += "\n" + line + ","
 
 	return value_string
@@ -82,9 +84,11 @@ def main():
 		print("Pass a valid filename as an arg!!")
 		return
 	
-	readType = cmd_args[2]		
+	#readType = cmd_args[2]
+	readType = "16byte"		
 	coe_string = radix
-	filename = cmd_args[1]
+	#filename = cmd_args[1]
+	filename = "text_roms/father.txt"
 	
 	try:
 		#Colors are 8-bit values(1-byte)

@@ -224,7 +224,7 @@ fHsimNewEvcdObnDrv                 	0
 fHsimEvcdDbgFlags                  	0
 fHsimDumpElabData                  	1
 fHsimNoDeposit                     	0
-fHsimDumpOffsetData                	1
+fHsimDumpOffsetData                	0
 fNoOfsOpt                          	0
 fHsimDynamicElab                   	1
 fHsimDynamicElabDiag               	0
@@ -291,7 +291,7 @@ fHsimAllowAllVecGateInVpd          	0
 fHsimAllowUdpInVpd                 	1
 fRaptorProf                        	0
 fHsimVpdOptGateMustDisable         	0
-fHsimVpdOptGate                    	1
+fHsimVpdOptGate                    	0
 fHsimVpdOptDelay                   	0
 fHsimVpdOptMPDelay                 	0
 fHsimVpdOptDiag                    	0
@@ -566,7 +566,7 @@ fHsimMdbNewDebugOptExitOnError     	1
 fHsimNewDebugOptMemDiag            	0
 hsGlobalVerboseLevel               	0
 fHsimMdbVectorConstProp            	1
-fHsimEnableSeqUdpWrite             	1
+fHsimEnableSeqUdpWrite             	0
 fEnableNewFinalStrHash             	0
 fEnableNewAssert                   	1
 fRunDbgDmma                        	0
@@ -647,7 +647,7 @@ fHsimDumpMdbPruneVpdGates          	0
 fHsimGates1209                     	0
 fHsimCgRtlNoShareSmd               	0
 fHsimGenForErSum                   	0
-fVpdOpt                            	1
+fVpdOpt                            	0
 fHsimMdbCell                       	0
 fHsimCellDebug                     	0
 fHsimMdbCellComplexity             	1.500000
@@ -674,9 +674,9 @@ fHsimVpdGateOnlyFlag               	1
 fHsimMxConnFrc                     	0
 fHsimNewForceCbkVec                	0
 fHsimNewForceCbkVecDiag            	0
-fHsimMdbReplaceVpdHighConn         	1
-fHsimVpdHighConnReplaced           	1
-fHsimVpdOptSVTypes                 	1
+fHsimMdbReplaceVpdHighConn         	0
+fHsimVpdHighConnReplaced           	0
+fHsimVpdOptSVTypes                 	0
 fHsimDlyInitFrc                    	0
 fHsimCompactVpdFn                  	1
 fHsimPIP                           	0
@@ -700,7 +700,7 @@ fHsimMdbcgMultiDelayControl        	1
 fHsimParGateEvalMode               	0
 fHsimDFuseVectors                  	0
 fHsimVpdOptExpVec                  	0
-fHsimVpdOptSelGate                 	1
+fHsimVpdOptSelGate                 	0
 fHsimVpdOptSkipFuncPorts           	0
 fHsimVpdOptAlways                  	1
 fHsimVpdOptMdbCell                 	0
