@@ -87,8 +87,8 @@ module video_top
                  .tile_RAM_addr,
                  .palette_RAM_addr,
 
-                 .row,
-                 .col,
+                 .row(off_row),
+                 .col(off_col),
                  .blank,
 
                  .red,
