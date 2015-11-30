@@ -70,6 +70,7 @@ module top
   logic         fb_enb;    /* ram port B enable */
   logic         fb_wea;    /* ram write enable */
   logic         fb_web;
+  logic         conflict;
  
   // RAM interconnects 
   logic [11:0]  ram_addra;
@@ -152,7 +153,7 @@ module top
     end
     
     // all write enables are from the CPU
-    assign fb_wea = (~cpu_wr_n) && (~cpu_mreq_n);
+    assign fb_wea = (~cpu_wr_n) && (~cpu_mreq_n) && (~conflict);
     assign ram_wea = (~cpu_wr_n) && (~cpu_mreq_n);
     
     // The major arbitration module that handles routing

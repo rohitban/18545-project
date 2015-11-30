@@ -34,14 +34,15 @@ module pacman_mm
  // signals for the top module
  output logic rom_di_valid, 
  output logic ram_di_valid,  
- output logic cpu_wait_n);
+ output logic cpu_wait_n,
+ output logic conflict);
 // output logic [7:0] data_out) 
 // TODO do we need those?
 // output logic [7:0] cpu_data_out1, // for ROM
 // output logic [7:0] cpu_data_out2) // for normal RAM access
   
-  enum logic [3:0] {IDLE, CPU_ROM_ACK, CPU_RAM_ACK, CPU_FB_ACK} state, next; 
-  logic conflict, rom_access, gpu_rd; 
+  enum logic [3:0] {IDLE, CPU_ROM_ACK, CPU_RAM_ACK1, CPU_RAM_ACK2, CPU_FB_ACK} state, next; 
+  logic rom_access, gpu_rd; 
   
   always_ff @(posedge clk, negedge reset_n) begin
     if (~reset_n) 
@@ -100,7 +101,7 @@ module pacman_mm
             // 900  ==     1001 0000 0000
             ram_ena = 1; 
             ram_addra = (cpu_addr_in - 16'h4800); 
-            next = CPU_RAM_ACK;
+            next = CPU_RAM_ACK1;
           end
         end
         else if (conflict) begin
@@ -109,12 +110,13 @@ module pacman_mm
         end 
         else begin
           // no read
-          //next = IDLE; 
-          if (rom_access) begin
-            rom_ena = 1; 
-            rom_addra = cpu_addr_in[13:0]; 
-            next = CPU_ROM_ACK; 
-          end
+          next = IDLE; 
+          cpu_wait_n = 1;
+//          if (rom_access) begin
+//            rom_ena = 1; 
+//            rom_addra = cpu_addr_in[13:0]; 
+//            next = CPU_ROM_ACK; 
+//          end
         end
       end
       CPU_FB_ACK: begin
@@ -135,18 +137,23 @@ module pacman_mm
             next = IDLE;
         end 
       end
-      CPU_RAM_ACK: begin
+      CPU_RAM_ACK1: begin
+        ram_ena = 1; 
+        ram_addra = (cpu_addr_in - 16'h4800); 
+        next = CPU_RAM_ACK2;
+      end
+      CPU_RAM_ACK2: begin
         cpu_wait_n = 1;
         ram_di_valid = 1;
         ram_ena = 1; 
         ram_addra = (cpu_addr_in - 16'h4800); 
         if (~cpu_mreq_n) begin
-            next = CPU_RAM_ACK;
+            next = CPU_RAM_ACK2;
         end
         else begin
             next = IDLE;
         end 
-      end      
+      end
     endcase
   end
   
