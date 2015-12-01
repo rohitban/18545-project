@@ -1,15 +1,27 @@
 
 // simple testbench
+/*
 module tb; 
+  logic reset_L, record, sample, micData, micClk, micLRSel; 
+  logic [1:0] match;
+  
+  logic clock;
+  
   initial begin
       clock = 0; 
       forever #5 clock = ~clock; 
   end
   
-  logic reset_L, record, sample, micData, micClk, micLRSel; 
-  logic [1:0] match; 
+   
 
-  SpeechRecog sr(.clk(clock), .*);
+  SpeechRecog sr(.clk(clock),
+                 .reset_L,
+                 .record,
+                 .sample,
+                 .match,
+                 .micData,
+                 .micClk,
+                 .micLRSel);
 
   initial begin
     $monitor("", things);
@@ -17,17 +29,17 @@ module tb;
     record = 0;
     sample = 0; 
     micData = 0; 
-    @(posedge clk);
+    @(posedge clock);
     reset_L = 0; 
     for (int i=0; i<100; i++) begin
-      @(posedge clk);
+      @(posedge clock);
 
-      @(posedge clk);
-      @(posedge clk);
-      @(posedge clk);
+      @(posedge clock);
+      @(posedge clock);
+      @(posedge clock);
     end
 
-endmodule
+endmodule:tb*/
 
 
 /** Top module for speech recognition for Pacman Controls
@@ -39,7 +51,7 @@ endmodule
 module SpeechRecog (
   ////////////////////////	Clock Input	 	////////////////////////
   input	logic clk,			    // A 100 MHz clock from top
-  input logic reset_L
+  input logic reset_L,
   ////////////////////////	Push Button		////////////////////////
   input	logic record,       // uses a push button debounced from top module
   input logic sample,       // set if it's sample mode; unasserted if real mode
@@ -50,8 +62,7 @@ module SpeechRecog (
   // audio signals from/to top module
   input logic           micData, 
   output logic          micClk, 
-  output logic          micLRSel,
-);
+  output logic          micLRSel);
 
 
 // TODO need to change 
@@ -69,8 +80,15 @@ logic ram_wr;
 
 // The recording module
 logic rec_en;
-voice_record vr(.enable(rec_en), .voice_data(micData), 
-                .store_data(ram_data), .store_wr(ram_wr), .*);
+
+voice_record #(8) vr(.enable(rec_en), 
+                     .voice_data(micData),
+                      
+                     .store_data(ram_data),
+                     .store_wr(ram_wr),
+                      
+                     .reset_L,
+                     .clk);
 
 
 // This module stores the FFT-ed sample data
@@ -123,7 +141,7 @@ voice_record vr(.enable(rec_en), .voice_data(micData),
 //);
 //
 
-endmodule
+endmodule: SpeechRecog
 
 
 /** @brief This module will record the voice data bitstream into
@@ -134,15 +152,16 @@ endmodule
  *  We will either enlarge the RAM or slow down the clock later. 
  */
 module voice_record
-#(parameter WIDTH = 8)
-(input logic clk, reset_L, 
- input logic enable,
- input logic voice_data, 
+    #(parameter WIDTH = 8)
+    (input logic clk, reset_L, 
+    input logic enable,
+    input logic voice_data, 
 
- output logic store_wr,
- output logic [WIDTH-1:0] store_data)
-
+    output logic store_wr,
+    output logic [WIDTH-1:0] store_data);
+  
   enum logic [1:0] {STOP, RECORD, STORE} cur, next; 
+  
   // counter
   logic cnt_en; 
   logic [11:0] count; 
@@ -153,12 +172,12 @@ module voice_record
 
   // wait for enable
   always_ff @(posedge clk, negedge reset_L) begin
-    if (~reset_L) 
+    if (~reset_L) begin 
       cur <= STOP; 
       count <= 12'd0;
-    else 
+    end
+    else begin
       cur <= next; 
-
       // implement the counter
       if (cnt_en)
         count <= count + 1;
@@ -167,11 +186,12 @@ module voice_record
       
       // implement the shift register
       if (shift_en) 
-        voice_byte <= {voice[WIDTH-2:0], voice_data};
+        voice <= {voice[WIDTH-2:0], voice_data};
       else if (shift_clr) 
         voice <= 0;
       else 
         voice <= voice; 
+    end
   end
 
   
@@ -203,13 +223,14 @@ module voice_record
       end
     endcase
   end
-endmodule
+  
+endmodule: voice_record
 
 module sample_compare 
 #(parameter ERROR = 5, WIDTH = 32) 
 (input logic clk,			              // A 100 MHz clock from top
  input logic [WIDTH-1:0] data_ina,    // data stream A
- input logic [WIDTH-1:0] data_ina,    // data stream B
+ input logic [WIDTH-1:0] data_inb,    // data stream B
  input logic enable,                 // Start comparing
  output logic match);
   // nothing for now

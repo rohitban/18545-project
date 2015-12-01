@@ -59,7 +59,8 @@ module mem_remap
 
 endmodule: mem_remap
 
-//registers for 
+//registers for storing frequencies
+//Normally multiple memory addresses
 module fa_reg
     #(parameter w = 4) 
     (input  logic       clk, rst,
@@ -88,6 +89,9 @@ module fa_reg
 
 endmodule: fa_reg
 
+
+//Make sure that the accumlator 
+//is updated only every 96KHz(when hooked up to a 100Mhz clock)
 module clk_count
     #(parameter w = 11, val = 11'd1042)
     (input logic clk, rst,
