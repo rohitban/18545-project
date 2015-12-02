@@ -70,7 +70,7 @@ module top
   logic         fb_enb;    /* ram port B enable */
   logic         fb_wea;    /* ram write enable */
   logic         fb_web;
-  logic         conflict;
+  logic         gpu_rd;
  
   // RAM interconnects 
   logic [11:0]  ram_addra;
@@ -118,7 +118,27 @@ module top
    *              Hacks                                         *
    *                              begin                         *
    **************************************************************/ 
- 
+   // hardcode the timer interrupt This runs the game
+   // we are running at 50MHz -> 10ms timer interrupt = 500,000 cycles
+   // log(2)(500,000) = 18.9
+   logic [17:0] int_cnt;
+   always_ff @(posedge clk, negedge reset_n) begin
+      if (~reset_n) begin 
+        int_cnt <= 0;
+        cpu_int_n <= 1;
+      end
+      else begin
+        if (int_cnt == 18'd500000) begin
+          cpu_int_n <= 0;
+          int_cnt <= 0;
+        end
+        else begin
+          int_cnt <= int_cnt + 1;
+          cpu_int_n <= 1;
+        end
+      end
+   end
+
   /**************************************************************
    *              Hacks                                         *
    *                              end                           *
@@ -131,7 +151,6 @@ module top
    *                              begin                         *
    **************************************************************/
    
-    assign cpu_int_n = 1; 
     assign cpu_nmi_n = 1; 
     assign cpu_busrq_n = 1; 
     
@@ -139,9 +158,10 @@ module top
     assign fb_dina = cpu_dout;
     assign ram_dina = cpu_dout;
     assign tile_ROM_addr = fb_douta;
-    assign palette_ROM_addr = fb_doutb;
+    //assign palette_ROM_addr = fb_doutb;
+    assign palette_ROM_addr = 1;
     
-    // TODO ==> need to multiplex with cpu_di <== maybe use the module below
+    
     always_comb begin
       cpu_di = 0;
       if (rom_di_valid) begin
@@ -153,7 +173,7 @@ module top
     end
     
     // all write enables are from the CPU
-    assign fb_wea = (~cpu_wr_n) && (~cpu_mreq_n) && (~conflict);
+    assign fb_wea = (~cpu_wr_n) && (~cpu_mreq_n) && (~gpu_rd);
     assign ram_wea = (~cpu_wr_n) && (~cpu_mreq_n);
     
     // The major arbitration module that handles routing
@@ -223,6 +243,20 @@ module top
    *              GPU                                           *
    *                              end                           *
    **************************************************************/
+   
+   /**************************************************************
+    *              SOUND                                         *
+    *                              begin                         *
+    **************************************************************/
+   
+   
+   
+   
+   /**************************************************************
+    *              SOUND                                        *
+    *                              end                           *
+    **************************************************************/
+   
   
   /**************************************************************
    *              MM(memory management)                         *

@@ -35,14 +35,14 @@ module pacman_mm
  output logic rom_di_valid, 
  output logic ram_di_valid,  
  output logic cpu_wait_n,
- output logic conflict);
+ output logic gpu_rd);
 // output logic [7:0] data_out) 
 // TODO do we need those?
 // output logic [7:0] cpu_data_out1, // for ROM
 // output logic [7:0] cpu_data_out2) // for normal RAM access
   
   enum logic [3:0] {IDLE, CPU_ROM_ACK, CPU_RAM_ACK1, CPU_RAM_ACK2, CPU_FB_ACK} state, next; 
-  logic rom_access, gpu_rd; 
+  logic conflict, rom_access; 
   
   always_ff @(posedge clk, negedge reset_n) begin
     if (~reset_n) 
