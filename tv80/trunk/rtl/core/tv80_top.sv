@@ -158,8 +158,8 @@ module top
     assign fb_dina = cpu_dout;
     assign ram_dina = cpu_dout;
     assign tile_ROM_addr = fb_douta;
-    //assign palette_ROM_addr = fb_doutb;
-    assign palette_ROM_addr = 1;
+    assign palette_ROM_addr = fb_doutb;
+    //assign palette_ROM_addr = 1;
     
     
     always_comb begin
