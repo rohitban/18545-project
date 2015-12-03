@@ -128,7 +128,7 @@ module top
         cpu_int_n <= 1;
       end
       else begin
-        if (int_cnt == 18'd500000) begin
+        if (int_cnt == 18'd100000) begin
           cpu_int_n <= 0;
           int_cnt <= 0;
         end
@@ -158,8 +158,8 @@ module top
     assign fb_dina = cpu_dout;
     assign ram_dina = cpu_dout;
     assign tile_ROM_addr = fb_douta;
-    assign palette_ROM_addr = fb_doutb;
-    //assign palette_ROM_addr = 1;
+    //assign palette_ROM_addr = fb_doutb;
+    assign palette_ROM_addr = 1;
     
     
     always_comb begin
