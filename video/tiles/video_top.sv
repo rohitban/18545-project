@@ -6,12 +6,12 @@
 `define ROW_MIN 9'd96
 `define ROW_MAX 9'd384
 
-`include "vga_controller.sv"
-`include "tile_top.sv"
 
 
 module video_top
     (input  logic       clk, rst,
+     
+     //input  logic [7:0] sw,//TEST
      
      //ACCESS tiles
      input  logic [7:0] tile_ROM_addr,
@@ -20,6 +20,12 @@ module video_top
      //ACCESS PALETTES
      input  logic [5:0] palette_ROM_addr,
      output logic [15:0] palette_RAM_addr,
+     
+     
+     //SPRITE INPUTS
+     input  logic [7:0] sprite_RAM_din,
+     input  logic       wr_en,
+     input  logic [15:0] RAM_addr,
 
      output logic [3:0] vgaRed, vgaGreen, vgaBlue,
      output logic       Hsync, Vsync);
@@ -90,7 +96,10 @@ module video_top
                 .VGA_G(vgaGreen));
     */
     
-    
+   
+    //TILES
+    logic [3:0] tile_r,tile_g,tile_b;
+        
     tile_block tb(.clk,//(clk_400),
                  .rst(rst),
 
@@ -107,18 +116,81 @@ module video_top
 
                  .blank,
 
-                 .red,
-                 .blue,
-                 .green);
+                 .red(tile_r),
+                 .blue(tile_b),
+                 .green(tile_g));
+   
+                 
+                 
+                 
+   //SPRITES
+   logic [3:0] sprite_r, sprite_g, sprite_b;
+   
+   sprite_top sprt(.clk,
+                   .rst,
+                   
+                   //.sw,//sw[7:0] for testing
+                   
+                   .row(off_row),
+                   .col(off_col),
+                   
+                   .blank,
+                   
+                   //ram control
+                   .sprite_RAM_din,
+                   .wr_en,
+                   .RAM_addr,
+                   
+                   //Colors
+                   .sprite_r,
+                   .sprite_g,
+                   .sprite_b);
+                   
+                   
+   sprite_tile_overlay ovrly(.tile_r,
+                             .tile_g,
+                             .tile_b,
+                             
+                             .sprite_r,
+                             .sprite_g,
+                             .sprite_b,
+                             
+                             .red,
+                             .green,
+                             .blue);       
+                   
     
     
     /*
     color_band clr(.col,
                    .VGA_R(vgaRed),
+                   .VGA_R(vgaRed),
                    .VGA_B(vgaBlue),
                    .VGA_G(vgaGreen));
     */              
 endmodule: video_top
+
+module sprite_tile_overlay
+    (input  logic [3:0] sprite_r, sprite_g, sprite_b,
+     input  logic [3:0] tile_r, tile_g, tile_b,
+     output logic [3:0] red, green, blue);
+     
+     logic sred_0, sblue_0, sgreen_0;
+     
+     logic black_sprite;
+     
+     
+     assign sred_0 = sprite_r=='d0;
+     assign sblue_0 = sprite_b=='d0;
+     assign sgreen_0 = sprite_g=='d0;
+     
+     assign black_sprite = sred_0&&sblue_0&&sgreen_0;
+     
+     assign red = (black_sprite)?tile_r:sprite_r;
+     assign green = (black_sprite)?tile_g:sprite_g;
+     assign blue = (black_sprite)?tile_b:sprite_b;
+     
+endmodule: sprite_tile_overlay
 
 module adjustVGA
     (input  logic [9:0] col,
