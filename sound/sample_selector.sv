@@ -99,7 +99,7 @@ module clk_count
      
      logic [w-1:0] count;
     
-    assign en = (count==11'd1042);
+    assign en = ~(count<11'd1042);
     
     always_ff@(posedge clk, posedge rst)
         if(rst)
@@ -193,16 +193,16 @@ module sound_reg
 
    assign accum_in = accum + freq;
 
-    logic en_accum;
+    logic clk_96Khz;
     
     clk_count hz_96(.clk, .rst,
-                    .en(en_accum));
+                    .en(clk_96Khz));
                     
-   register #(4*w) ac_reg(.clk,
+   register #(4*w) ac_reg(.clk(clk_96Khz),
                           .clr( ),
                           .reset(rst),
                           .D(accum_in),
-                          .en(en_accum),//loads at 96khz
+                          .en(1'b1),//loads at 96khz
                           .Q(accum));
 
    //Access ROM
@@ -224,7 +224,6 @@ module sound_reg
                   
    assign sample_val = sample_byte[3:0];
 
-   //TODO:
    //Testing
    
    /*
@@ -319,7 +318,7 @@ module sample_selector
                    .ld_vol_1,.ld_vol_2,.ld_vol_3,
                    .ld_index_1,.ld_index_2,.ld_index_3);
 
-   //TODO: add multiplier for output 
+   //multiplier for output 
    //Multiply 6 4-bit values to get 3 8-bit sound outputs
    logic [7:0] voice_1_out, voice_2_out, voice_3_out;
    

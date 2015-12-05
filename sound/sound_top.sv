@@ -1,26 +1,21 @@
 
 
 module sound_top
-    (input  logic clk, btnC, btnL,btnR,
+    (input  logic clk, rst, 
+     input  logic wr_en,
+     input  logic [7:0] cpu_data,
+     input  logic [15:0] ram_addr;
      //input  logic [3:0] sw,
      output logic ampPWM, ampSD);
     
+    /*
     logic [7:0] cpu_data;//change to actual data
     logic [15:0] ram_addr;
     
     assign ram_addr  = 0;  
     
-    assign cpu_data = 'd0;
+    assign cpu_data = 'd0;*/
     
-    
-    logic rst, wr_en;
-    
-    
-    
-    //TODO: change to actual input
-    assign wr_en = btnL;
-        
-    assign rst = btnC;
     
     //Select the sample to be played
     logic [9:0] sample_out;
@@ -43,14 +38,11 @@ module sound_top
                             
                             
     //Create pwm control stuff
-    logic amp;
-    
-    assign ampPWM = amp&btnR;
         
     PWM_controller #(11,11'd1042)PWM_ctrl(.clk,
                                           .rst,
                                           .pwm_thresh,
-                                          .ampPWM(amp),
+                                          .ampPWM(ampPWM),
                                           .ampSD);
     
                             
