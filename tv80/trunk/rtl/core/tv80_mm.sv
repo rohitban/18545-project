@@ -20,6 +20,7 @@ module pacman_mm
  input logic cpu_mreq_n, 
  input logic [15:0] gpu_addr_in1,
  input logic [15:0] gpu_addr_in2,
+ input logic        ready, // if the top module is ready for the code to run
  
  output logic [13:0] rom_addra, 
  output logic rom_ena, 
@@ -82,7 +83,7 @@ module pacman_mm
         end
         
         // handle the CPU requests
-        if (~cpu_mreq_n & ~conflict) begin
+        if (~cpu_mreq_n & ~conflict & ready) begin
           if (rom_access) begin
             rom_ena = 1; 
             rom_addra = cpu_addr_in[13:0]; 
@@ -104,8 +105,9 @@ module pacman_mm
             next = CPU_RAM_ACK1;
           end
         end
-        else if (conflict) begin
+        else if (conflict || ~ready) begin
           // got a conflicting access -- halt the CPU and wait for GPU to finish -- BAD approach but can't stop this.. 
+          // or if we are waiting for top level to be ready, halt the CPU
           next = IDLE; 
         end 
         else begin

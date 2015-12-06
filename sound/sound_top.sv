@@ -4,7 +4,7 @@ module sound_top
     (input  logic clk, rst, 
      input  logic wr_en,
      input  logic [7:0] cpu_data,
-     input  logic [15:0] ram_addr;
+     input  logic [15:0] ram_addr,
      //input  logic [3:0] sw,
      output logic ampPWM, ampSD);
     
@@ -25,6 +25,9 @@ module sound_top
                              //.sw,//test
                              
                              .rst,
+                             
+                             .wr_en,
+                             
                              .ram_addr,
                              .cpu_data,
                              .sample_out);

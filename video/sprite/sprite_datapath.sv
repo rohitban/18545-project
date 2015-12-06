@@ -335,7 +335,7 @@ module sprite_datapath
     //now get values for the active sprite
     logic [31:0] active_palette;
     
-    logic [5:0] active_palette_addr;
+    logic [7:0] active_palette_addr;
 
     logic [5:0] active_num;
 
@@ -353,9 +353,10 @@ module sprite_datapath
 
     //assign active_yflip = sw[1];
 
-    //assign active_palette_addr = palette_index[5:0];
+    assign active_palette_addr = palette_index[active_sprite];
+
      
-   assign active_palette_addr = 'd3;
+    //assign active_palette_addr = 'd3;
 
     //now get relative row and col number
     logic [7:0] row_disp, col_disp;
@@ -424,7 +425,7 @@ module sprite_datapath
     //assign active_palette = 0;
     
     palette_4byte_rom spr_palette(.clka(clk),
-                                  .addra(active_palette_addr),
+                                  .addra(active_palette_addr[5:0]),
                                   .douta(active_palette));
 
     //select color

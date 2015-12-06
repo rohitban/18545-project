@@ -130,10 +130,17 @@ module tile_block
     //Assign colors
     assign red = {red_frac[2],red_frac};
     assign green = {green_frac[2],green_frac};
-    assign blue = {1'b0,blue_frac[1],blue_frac};
+//    assign blue = {1'b0,blue_frac[1],blue_frac};
+    always_comb begin
+        case (blue_frac) 
+            2'b11: blue = 4'hf;
+            2'b10: blue = 4'd10;
+            2'b01: blue = 4'd5;
+            2'b00: blue = 4'h0;
+        endcase
+    end
     
     
-
 endmodule: tile_block
 
 module palette_mux
