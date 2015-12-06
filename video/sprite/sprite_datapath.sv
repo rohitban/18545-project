@@ -121,6 +121,7 @@ endmodule: has_sprite
 module sprite_mem_remap
     (input  logic [15:0] RAM_addr,
      input  logic        wr_en,
+     output logic        ld_flip_bit,
      output logic [`NUM_SPRITES-1:0] ld_x, ld_y,
      output logic [`NUM_SPRITES-1:0] ld_num_flip,ld_palette);
 
@@ -129,8 +130,12 @@ module sprite_mem_remap
         ld_y = 0;
         ld_num_flip = 0;
         ld_palette = 0;
+        ld_flip_bit = 0;
         if(wr_en) begin
           case(RAM_addr)
+
+            //LOAD FLIP BIT
+            16'h5003: ld_flip_bit = 1'b1;
             //LOAD X
             16'h5060: ld_x[0] = 1'b1;
             16'h5062: ld_x[1] = 1'b1;
@@ -192,7 +197,18 @@ module sprite_datapath
      //Output the colors that the sprite will have
      //at that position(if any)
      output logic [3:0] sprite_r, sprite_g, sprite_b);
-    
+   
+    //Deal with flip bit
+
+    logic [7:0] flip_bit;
+    logic       ld_flip_bit;
+
+    always_ff@(posedge clk, posedge rst)
+        if(rst)
+          flip_bit <= 0;
+        else if(ld_flip_bit)
+          flip_bit <= sprite_RAM_din; 
+
     /////////////////
     //STORE SPRITES//
     /////////////////
@@ -208,8 +224,10 @@ module sprite_datapath
     //MAP LOAD SIGNALS:       //RAM inputs
     sprite_mem_remap spr_remap(.RAM_addr,
                               .wr_en,
-
-                              //Load sigs
+                                
+                              .ld_flip_bit,
+                                
+                               //Load sigs
                               .ld_x,
                               .ld_y,
                               .ld_num_flip,
@@ -350,10 +368,16 @@ module sprite_datapath
 
     logic [7:0] pixel_num;
 
+    logic xflip_adj, yflip_adj;
+
+    assign xflip_adj = (flip_bit==0)?active_xflip:~active_xflip;
+
+    assign yflip_adj = (flip_bit==0)?active_yflip:~active_yflip;
+
     sprite_pixel_num spr_pix(.row(row_disp[3:0]),
                              .col(col_disp[3:0]),
-                             .xflip(~active_xflip),
-                             .yflip(~active_yflip),
+                             .xflip(xflip_adj),
+                             .yflip(yflip_adj),
                              .pixel_num);
     
     logic [11:0] pix_addr;
