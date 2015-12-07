@@ -32,7 +32,7 @@ module voice_tb;
         @(posedge clk);
         
         enable <= 0;
-        for(int i = 0; i < 2048;i++)
+        for(int i = 0; i < 10000;i++)
             @(posedge clk);
         $finish;
     end
@@ -50,12 +50,18 @@ module voice_test_top
      output logic micClk,
      output logic micLRSel,
      
-     input  logic [12:0] sw,
-     output logic [15:0] led);
+     input  logic [15:12] sw,
+     output logic [1:0] led);
      
      logic ram_wr;
      
-     logic [31:0] ram_data;
+     logic control_in;
+     
+     assign control_in = (sw=='d0);
+     
+     logic [31:0] ram_data, ram_out;
+     
+     logic [11:0] ram_addr;
      
      logic reset_L;
      
@@ -67,16 +73,18 @@ module voice_test_top
                       .reset_L(~btnC),
                  
                       .sw,//TEST
-                      .led,//TEST
+                      //.led,//TEST
                        
                        .ram_wr,
                        .ram_data,
+                       .ram_out,
+                       .ram_addr,
                        
                       .record(btnR),
                  
                       .sample( ),
                  
-                      .match( ),
+                      .match(led[1:0]),
                  
                       .micData,
                       .micClk);
@@ -85,6 +93,9 @@ module voice_test_top
              .probe0(micData),
              .probe1(micClk),
              .probe2(ram_wr),
-             .probe3(ram_data));
+             .probe3(ram_data),
+             .probe4(ram_out),
+             .probe5(ram_addr),
+             .probe6(control_in));
     
 endmodule: voice_test_top

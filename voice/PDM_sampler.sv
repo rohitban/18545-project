@@ -1,7 +1,7 @@
 `define SAMPLE_FREQ 'd10000
 
 
-module sample_shifter
+module shifter
     #(parameter sample_w = 8)
     (input logic clk, rst,
      input logic count_en,
@@ -20,7 +20,7 @@ module sample_shifter
         else 
           ram_data <= 0;
 
-endmodule: sample_shifter
+endmodule: shifter
 
 module wr_ctrl
     (input logic clk, rst, count_en,
@@ -66,6 +66,7 @@ module PDM_sample
     
     logic [sample_w-2:0] sample_count;
     logic                rec_en;
+    logic shift_en;
     
     assign rec_en = (count < 2**(sample_w-'d1) - 'd1);    
     
@@ -74,13 +75,13 @@ module PDM_sample
                     .shift_en, .ram_wr);
 
     //Shift register
-    logic shift_en;
+   
 
-    sample_shifter #(sample_w)  samp_shft(.clk,.rst,
-                                          .count_en,
-                                          .din({1'b0,sample_count}),
-                                          .shift_en,
-                                          .ram_data);
+    shifter #(sample_w)  samp_shft(.clk,.rst,
+                                   .count_en,
+                                   .din({1'b0,sample_count}),
+                                   .shift_en,
+                                   .ram_data);
 
 
     assign shift_en = (count==2**(sample_w-1)-'d1);
