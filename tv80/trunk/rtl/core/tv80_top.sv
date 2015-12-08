@@ -31,15 +31,12 @@ module tb;
       @(posedge clk);      
       
       for(int i = 0; i<1000; i++) begin
-        sw = 16'h0001;
         @(posedge clk);
-        sw = 16'h0002;
         @(posedge clk);
-        sw = 16'h0003;
         @(posedge clk);
-        sw = 16'h0000;
         @(posedge clk);
       end
+      sw = 16'h0001;
    end
 endmodule
 
@@ -76,7 +73,7 @@ module top
   //logic reset_n;
   
   assign reset_n = ~btnC;
-    
+  
   // FB interconnects 
   logic [10:0]  fb_addra, fb_addrb;
   logic [7:0]   fb_dina, fb_dinb, fb_doutb, fb_douta;
@@ -87,8 +84,8 @@ module top
   logic         gpu_rd;
  
   // RAM interconnects 
-  logic [11:0]  ram_addra, ram_addra_final, ram_addr_setup;
-  logic [7:0]   ram_dina, ram_dina_final, ram_din_setup;
+  logic [11:0]  ram_addra, ram_addra_final, ram_addr_setup, gpu_ram_addr;
+  logic [7:0]   ram_dina, ram_dina_final, ram_din_setup, gpu_ram_din;
   logic [7:0]   ram_douta;
   logic         ram_ena, ram_ena_final, ram_en_setup;    /* ram port A enable */
   logic         ram_wea, ram_wea_final, ram_we_setup;    /* ram write enable */
@@ -128,6 +125,7 @@ module top
    
    logic [15:0] tile_RAM_addr;
    logic [15:0] palette_RAM_addr;
+   logic        pill_eaten, gpu_pause; 
    
    // controls
    logic [1:0]  move, move_latch;
@@ -143,11 +141,14 @@ module top
    logic ready; // could possibly be use in other places for memory init
    // just wait for 100 cycles before starting
    logic [6:0] ready_cnt, change_cnt;
+   logic [7:0] pills;
    always_ff @(posedge clk, negedge reset_n) begin
      if (~reset_n) begin 
        ready_cnt <= 0;
        ready <= 0;
        change_cnt <= 0; 
+       pill_old <= 0; 
+       pill_new <= 0;
      end
      else begin
        if (ready_cnt == 7'd100) begin
@@ -163,13 +164,21 @@ module top
          ready_cnt <= ready_cnt + 1;
        end
        
-       if (move_change) begin
+       if (move_change | gpu_pause) begin
             change_cnt <= 0;
        end
-       
 
+       if (pill_eaten) begin
+          pills <= pills + 1;
+       end
+
+       if (pills == 8'd244) begin
+          pills <= 0;
+       end
+       
      end
    end   
+   
    
    // preset some RAM values
    always_comb begin
@@ -210,18 +219,43 @@ module top
             // possibly use switch to select modes
         endcase
         
+        // all runtime hardware memory writes
+        // used to implement collision and switch inputs
         case(change_cnt)
-            7'd5: begin
+            7'd3: begin
+                // this writes the changed sprite location
+                ram_addr_setup = (gpu_ram_addr-16'h4800)[12:0];
+                ram_en_setup = 1; 
+                ram_we_setup = 1; 
+                ram_din_setup = gpu_ram_din;
+            end
+
+            //7'd6: begin
+            //    // this writes to the frame buffer
+            //    fb_addrb = gpu_fb_addr; // 0x5000 - 0x4800
+            //    fb_enb = 1; 
+            //    fb_web = 1; 
+            //    fb_dinb = {4'b1001, move_bit};
+            //end 
+            7'd12: begin
+                // writes to the num of pills register
+                ram_addr_setup = 13'h60e; // 0x5000 - 0x4800
+                ram_en_setup = pill_eaten;
+                ram_we_setup = 1;
+                ram_din_setup = pills+1;
+            end
+
+            7'd12: begin
                 ram_addr_setup = 13'h800; // 0x5000 - 0x4800
                 ram_en_setup = 1; 
                 ram_we_setup = 1; 
                 ram_din_setup = {4'b1001, move_bit};
             end
-            7'd10: begin
-                 ram_addr_setup = 13'h840; // 0x5000 - 0x4800
-                 ram_en_setup = 1; 
-                 ram_we_setup = 1; 
-                 ram_din_setup = {4'b1001, move_bit};
+            7'd15: begin
+                ram_addr_setup = 13'h840; // 0x5000 - 0x4800
+                ram_en_setup = 1; 
+                ram_we_setup = 1; 
+                ram_din_setup = {4'b1001, move_bit};
              end
         endcase
      end
@@ -231,7 +265,7 @@ module top
    // hardcode the timer interrupt This runs the game
    // we are running at 50MHz -> 10ms timer interrupt = 500,000 cycles
    // log(2)(500,000) = 18.9 
-   logic [17:0] int_cnt;
+   logic [18:0] int_cnt;
    logic int_e, int_e_new; // if interrupt is disabled by writes to 0x5000
    always_ff @(posedge clk, negedge reset_n) begin
       if (~reset_n) begin 
@@ -241,7 +275,7 @@ module top
       end
       else begin
         int_e <= int_e_new;
-        if (int_cnt == 18'd100000) begin
+        if (int_cnt == 19'd130000) begin
           if (int_e) begin
             cpu_int_n <= 0;
           end
@@ -268,7 +302,7 @@ module top
    // for debug
    logic _task_list_wr, _input_rd, _jump_table_active; 
    assign _task_list_wr = (cpu_A >= 16'h4cc0 && cpu_A <= 16'h4cff) & ram_ena & ram_wea;
-   assign _input_rd = (cpu_A == 16'h5000) & ram_ena & (~ram_wea);
+   assign _input_rd = (cpu_A == 16'h5000 || cpu_A == 16'h5040) & ram_ena & (~ram_wea);
    
    logic _tile_pallete_wr, _ghost_pallete_wr, _sprite_pallete_wr, _ghost_pallete_rd, _sprite_pallete_rd; 
    assign _tile_pallete_wr = (cpu_A <= 16'h47ff && cpu_A >= 16'h4400) & fb_ena & fb_wea;
@@ -277,7 +311,7 @@ module top
    assign _ghost_pallete_rd = (cpu_A == 16'h4c03 || cpu_A == 16'h4c05 || cpu_A == 16'h4c07 || cpu_A == 16'h4c09 || cpu_A == 16'h4c0b) & ram_ena & ~ram_wea;
    assign _sprite_pallete_rd = (cpu_A == 16'h4ff1 || cpu_A == 16'h4ff3 || cpu_A == 16'h4ff5 || cpu_A == 16'h4ff9 || cpu_A == 16'h4ffb || cpu_A == 16'h4ffd || cpu_A == 16'h4fff) & ram_ena & ~ram_wea;
 //   assign _jump_table_active = (cpu_A == 16'h23ed || cpu_A == 16'h24d7 || cpu_A == 16'h2419 || cpu_A == 16'h2448 || cpu_A == 16'h253d || cpu_A == 16'h268b || cpu_A == 16'h240d || cpu_A == 16'h2698 || cpu_A == 16'h2730 || cpu_A == 16'h276c);
-   assign _jump_table_active = (cpu_A == 16'h2698);
+   assign _jump_table_active = (cpu_A <= 16'h18c5 && cpu_A >=16'h187d);
   /**************************************************************
    *              Hacks                                         *
    *                              end                           *
@@ -384,11 +418,11 @@ module top
                  .RAM_addr(cpu_A),
                  
                  .Hsync,
-                 .Vsync);
-   
-
-   
-
+                 .Vsync, 
+                 .cpu_pause(gpu_pause),
+                 .ram_addr(gpu_ram_addr),
+                 .ram_din(gpu_ram_din),
+                 .pill_eaten(pill_eaten));
    
   /**************************************************************
    *              GPU                                           *
@@ -435,16 +469,16 @@ module top
     assign move_change = (move != move_latch); 
     always_comb begin
         case (move) 
-            2'b00: begin 
+            2'b00: begin // up
                 move_bit = 4'b1110;
             end
-            2'b01: begin 
+            2'b01: begin // left
                 move_bit = 4'b1101;
             end            
-            2'b10: begin 
+            2'b10: begin // right
                 move_bit = 4'b1011;
             end
-            2'b11: begin 
+            2'b11: begin //down
                 move_bit = 4'b0111;
             end
         endcase                      
@@ -499,7 +533,7 @@ module top
    *              RAM                                           *
    *                              end                           *
    **************************************************************/
-    //ila_0 ila(.clk(clk),.probe0(cpu_wr_n), .probe1(cpu_mreq_n));
+//    ila_0 ila(.clk(clk),.probe0(_jump_table_active), .probe1(_input_rd));
 
 endmodule
 

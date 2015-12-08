@@ -186,9 +186,13 @@ module sprite_datapath
      input  logic [8:0] row,
      input  logic [9:0] col,
 
-     //Test
-     //input logic [7:0] sw,
-
+     // new signals for the collision fix
+     output logic         cpu_pause, 
+     output logic [15:0]  ram_addr, 
+     output logic [7:0]   ram_din, 
+     output logic         pill_eaten, 
+     input logic [7:0]    tile_ROM_addr,
+     
      //Read from RAM
      input  logic [7:0] sprite_RAM_din,
      input  logic       wr_en,

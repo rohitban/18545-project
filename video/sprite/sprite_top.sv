@@ -13,7 +13,14 @@ module sprite_top
      input  logic [8:0] row,
      input  logic [9:0] col,
      input  logic       blank,
-    
+      
+     // new signals for the collision fix
+     output logic         cpu_pause, 
+     output logic [15:0]  ram_addr, 
+     output logic [7:0]   ram_din, 
+     output logic         pill_eaten, 
+     input logic [7:0]    tile_ROM_addr,
+
      //RAM control 
      input logic [7:0] sprite_RAM_din,
      input logic       wr_en,
@@ -38,17 +45,19 @@ module sprite_top
      sprite_datapath spr_dat(.clk,
                              .rst,
 
-                             //.sw,//TEST
+                             .cpu_pause,
+                             .ram_addr, 
+                             .ram_din, 
+                             .pill_eaten, 
+                             .tile_ROM_addr,
 
                              .wr_en,
                              .sprite_RAM_din,
                              .RAM_addr,
 
-
                               //VGA connections
                              .row,
                              .col,
-
 
                              //Colors
                              .sprite_r(calc_r),

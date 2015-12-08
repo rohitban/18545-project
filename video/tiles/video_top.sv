@@ -14,21 +14,24 @@ module video_top
      //input  logic [7:0] sw,//TEST
      
      //ACCESS tiles
-     input  logic [7:0] tile_ROM_addr,
-     output logic [15:0] tile_RAM_addr,
+     input  logic [7:0]   tile_ROM_addr,
+     output logic [15:0]  tile_RAM_addr,
 
      //ACCESS PALETTES
-     input  logic [5:0] palette_ROM_addr,
-     output logic [15:0] palette_RAM_addr,
+     input  logic [5:0]   palette_ROM_addr,
+     output logic [15:0]  palette_RAM_addr,
      
      
      //SPRITE INPUTS
-     input  logic [7:0] sprite_RAM_din,
-     input  logic       wr_en,
-     input  logic [15:0] RAM_addr,
+     input  logic [7:0]   sprite_RAM_din,
+     input  logic         wr_en,
+     input  logic [15:0]  RAM_addr,
 
-     output logic [3:0] vgaRed, vgaGreen, vgaBlue,
-     output logic       Hsync, Vsync);
+     output logic [3:0]   vgaRed, vgaGreen, vgaBlue,
+     output logic         Hsync, Vsync, 
+     output logic         gpu_pause, pill_eaten,
+     output logic [15:0]  gpu_ram_addr, 
+     output logic [7:0]   gpu_ram_din);
 
     //TEST
 //    logic [7:0] tile_ROM_addr;
@@ -128,19 +131,18 @@ module video_top
    
    sprite_top sprt(.clk,
                    .rst,
-                   
-                   //.sw,//sw[7:0] for testing
-                   
                    .row(off_row),
                    .col(off_col),
-                   
                    .blank,
-                   
+                   .cpu_pause,
+                   .ram_addr, 
+                   .ram_din, 
+                   .pill_eaten, 
+                   .tile_ROM_addr,
                    //ram control
                    .sprite_RAM_din,
                    .wr_en,
                    .RAM_addr,
-                   
                    //Colors
                    .sprite_r,
                    .sprite_g,
