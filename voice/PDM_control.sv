@@ -60,9 +60,19 @@ module PDM_control
     
     //MATCHER
     
+    logic [1:0] match_in;
+    logic       ld_match;
+
     matcher mat(.match_count,
-                .match);
-    
+                .match(match_in));
+   
+
+    always_ff@(posedge clk, posedge rst) begin
+        if(rst)
+          match <= `LEFT;
+        else if(ld_match)
+          match <= match_in;
+    end
     //////////////////////////////////////////////////
     assign ram_addr = count;
 
@@ -98,6 +108,8 @@ module PDM_control
         clr_counts = 0;
         en_count = 0;
         incr = 0;
+        ld_match = 0;
+
         case(cs)
             STOP: begin
                 ns = (enable)?RECORD:STOP;
@@ -114,7 +126,8 @@ module PDM_control
                 ns = (count < `CHUNKS)?COMPARE:STOP;
                 incr = (count < `CHUNKS)?1'b1:1'b0;
                 clr = (count<`CHUNKS)?1'b0:1'b1;
-                
+                ld_match = (count<`CHUNKS)?1'b0:1'b1;
+
                 if(ram_out==up_out)
                     en_count[`UP] = 1'b1;
                 if(ram_out==down_out)
