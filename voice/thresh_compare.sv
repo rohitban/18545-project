@@ -2,6 +2,7 @@
 
 
 module thresh_comp
+    #(parameter val = 'd15)
     (input  logic [31:0] ram_data, dir_data,
      output logic [2:0] add_val);
 
@@ -16,7 +17,7 @@ module thresh_comp
             assign ram_bytes[i] = ram_data['d8*(i+1)-'d1:'d8*i];
             assign dir_bytes[i] = dir_data['d8*(i+1)-'d1:'d8*i];
             
-            abs_check abs(.dir_bytes(dir_bytes[i]),
+            abs_check #(val) abs(.dir_bytes(dir_bytes[i]),
                           .ram_bytes(ram_bytes[i]),
                           .thresh_ok(thresh_ok[i]));
         end
