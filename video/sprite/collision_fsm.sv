@@ -21,19 +21,43 @@ module collision_fsm
 
      output logic       cpu_pause,
      output logic [15:0] tile_RAM_addr);
-
-    logic is_wall, is_pill;//checks for tiles
     
+    logic start_fsm;
 
+    
+    logic is_wall, is_pill;//checks for tiles
+
+    /////////////////////TILE CHECK////////////////////////////
+
+    assign is_pill = 'd 16 <= tile_ROM_addr && tile_ROM_addr < 'd19; 
+
+    assign is_wall = 'd222 <= tile_ROM_addr && tile_ROM_addr < 'd252;
+    
     logic is_pacman, is_ghost;//checks for sprites
 
+    ////////////////////SPRITE CHECK//////////////////////////
+
+    //Ghost sprites are 8-15 and  28-31 and 32-39 and 50-51
+
+    assign is_ghost = ('d8 <= sprite_num && sprite_num < 'd16)||
+                      ('d28 <= sprite_num && sprite_num < 'd32)||
+                      (sprite_num == 'd50) || (sprite_num == 'd51);
+    
+    //pacman sprites are 44-48 and 52-63
+    assign is_pacman = ('d44 <= sprite_num && sprite_num <= 'd63)&&~is_ghost;
+
+    ////////////////////////////////////////////////////////////// 
+    
+    assign start_fsm = (is_pacman||is_ghost)&&sprite_update;
+
+    //check for walls/pills
     logic [8:0] next_tile_row;
     logic [9:0] next_tile_col;
 
     logic [15:0] calc_tile_addr;
 
-    assign next_tile_row = {1'b0,sprite_row} + 'd8;
-    assign next_tile_col = {2'b0,sprite_col} + 'd16;
+    assign next_tile_row = {1'b0,sprite_row} + 'd4;
+    assign next_tile_col = {2'b0,sprite_col} + 'd4;
 
     tilemap_addr_dcd dcd(.row(next_tile_row),
                          .col(next_tile_col),
@@ -55,8 +79,8 @@ module collision_fsm
         tile_ram_addr = 0;
         case(cs)
             IDLE: begin
-                ns = (sprite_update)?RAM_WAIT:IDLE;
-                cpu_pause = (sprite_update)?1'b1:1'b0;
+                ns = (start_fsm)?RAM_WAIT:IDLE;
+                cpu_pause = (start_fsm)?1'b1:1'b0;
             end
             RAM_WAIT: begin
                 tile_ram_addr = calc_tile_addr + `TILEMAP_OFFSET;
