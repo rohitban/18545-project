@@ -7,6 +7,8 @@
 `define RIGHT 'd2
 `define DOWN 'd3
 
+`define THRESH 'd3
+
 `define DIRS 'd4
 
 `define SAMPLE_FREQ 'd10000
@@ -99,6 +101,12 @@ module PDM_control
                                                   .ram_data,
                                                   .ram_wr);
 
+    thresh_comp #(15) t_up(ram_out, up_out, up_val); 
+    thresh_comp #(15) t_down(ram_out, down_out, down_val); 
+    thresh_comp #(15) t_left(ram_out, left_out, left_val); 
+    thresh_comp #(15) t_right(ram_out, right_out, right_val); 
+    
+    
     always_comb begin
         //RECORD
         clr = 0;
@@ -128,13 +136,13 @@ module PDM_control
                 clr = (count<`CHUNKS)?1'b0:1'b1;
                 ld_match = (count<`CHUNKS)?1'b0:1'b1;
 
-                if(ram_out==up_out)
+                if(up_val >= `THRESH)
                     en_count[`UP] = 1'b1;
-                if(ram_out==down_out)
+                if(down_val >= `THRESH)
                     en_count[`DOWN] = 1'b1;
-                if(ram_out==left_out)
+                if(left_val >= `THRESH)
                     en_count[`LEFT] = 1'b1;
-                if(ram_out==right_out)
+                if(right_val >= `THRESH)
                     en_count[`RIGHT] = 1'b1;
             end
             
