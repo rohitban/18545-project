@@ -447,17 +447,49 @@ module sprite_datapath
                          .color_byte);
     
     //split colors
-    logic [2:0] r,g,b;
+    logic [2:0] r,g;
+    logic [1:0] b;
 
     assign b = color_byte[7:6];
     assign g = color_byte[5:3];
     assign r = color_byte[2:0];
 
-    assign sprite_r = {r[2],r};
-
-    assign sprite_g = {g[2],g};
-
-    assign sprite_b = {1'b0,b[1],b};
+    always_comb begin
+        case(r)
+            3'd0: sprite_r = 'd0;
+            3'd1: sprite_r = 'd2;
+            3'd2: sprite_r = 'd4;
+            3'd3: sprite_r = 'd6;
+            3'd4: sprite_r = 'd9;
+            3'd5: sprite_r = 'd11;
+            3'd6: sprite_r = 'd13;
+            3'd7: sprite_r ='hf;
+        endcase
+    end
+    
+    always_comb begin
+            case(g)
+                3'd0: sprite_g = 'd0;
+                3'd1: sprite_g = 'd2;
+                3'd2: sprite_g = 'd4;
+                3'd3: sprite_g = 'd6;
+                3'd4: sprite_g = 'd9;
+                3'd5: sprite_g = 'd11;
+                3'd6: sprite_g = 'd13;
+                3'd7: sprite_g ='hf;
+            endcase
+        end
+    
+    always_comb begin
+            case (b) 
+                2'b11: sprite_b = 4'hf;
+                2'b10: sprite_b = 4'd10;
+                2'b01: sprite_b = 4'd5;
+                2'b00: sprite_b = 4'h0;
+            endcase
+        end
+    
+    
     //////////////////////////////////////////////
 
 endmodule: sprite_datapath

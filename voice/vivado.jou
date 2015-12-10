@@ -2,49 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Dec  9 11:10:25 2015
-# Process ID: 2574
+# Start of session at: Wed Dec  9 16:47:34 2015
+# Process ID: 25652
 # Log file: /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/vivado.log
 # Journal file: /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project project_1 /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/project_1 -part xc7vx485tffg1157-1
-add_files -norecurse {/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/thresh_compare.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/SpeechRecog.v}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-add_files -norecurse {/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/voice_test_top.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/PDM_control.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/PDM_control_test.sv}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-remove_files /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/SpeechRecog.v
-import_files /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/voice_test_top.sv
-add_files -norecurse /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/SpeechRecog.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top voice_tb [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-remove_files /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/PDM_control_test.sv
-update_compile_order -fileset sim_1
-delete_fileset sim_1
-remove_files {/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/PDM_control.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/SpeechRecog.v}
-remove_files /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/project_1/project_1.srcs/sources_1/imports/voice/voice_test_top.sv
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-remove_files /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/thresh_compare.sv
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-add_files -norecurse {/afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/thresh_compare.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/PDM_control.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/PDM_sampler.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/voice_test_top.sv /afs/ece.cmu.edu/usr/xli2/Private/18545/18545-project/voice/SpeechRecogTest.sv}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
+open_project /afs/ece.cmu.edu/usr/xli2/Private/18545/pacman/z80_1/z80_1.xpr

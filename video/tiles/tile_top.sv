@@ -128,9 +128,37 @@ module tile_block
 
     
     //Assign colors
-    assign red = {red_frac[2],red_frac};
-    assign green = {green_frac[2],green_frac};
+    //assign red = {red_frac[2],red_frac};
+    //assign green = {green_frac[2],green_frac};
 //    assign blue = {1'b0,blue_frac[1],blue_frac};
+    always_comb begin
+        case(red_frac)
+            3'd0: red = 'd0;
+            3'd1: red = 'd2;
+            3'd2: red = 'd4;
+            3'd3: red = 'd6;
+            3'd4: red = 'd9;
+            3'd5: red = 'd11;
+            3'd6: red = 'd13;
+            3'd7: red ='hf;
+        endcase
+    end
+    
+    always_comb begin
+            case(green_frac)
+                3'd0: green = 'd0;
+                3'd1: green = 'd2;
+                3'd2: green = 'd4;
+                3'd3: green = 'd6;
+                3'd4: green = 'd9;
+                3'd5: green = 'd11;
+                3'd6: green = 'd13;
+                3'd7: green ='hf;
+            endcase
+        end
+
+
+
     always_comb begin
         case (blue_frac) 
             2'b11: blue = 4'hf;

@@ -1,16 +1,13 @@
 
+//For simulating the voice top module
 module voice_tb;
-    logic clk, btnC;
-    
-    logic btnL, enable;
-    assign btnL = enable;
+    logic clk, btnC;//clk and reset
+    logic btnR;//record button
     
     logic micData,micClk,micLRSel;
     
-    logic [7:0] sw;
-    logic [7:0] led;
-    
-    assign sw = 0;
+    logic [3:0] sw;
+    logic [1:0] led;
     
     voice_test_top dut(.*);
     
@@ -23,17 +20,38 @@ module voice_tb;
     
     
     initial begin
-        enable <= 0;
+        btnR = 0;
         micData <= 1;
         for(int i =0;i<100;i++)
             @(posedge clk);//wait for pll to sync
         
-        enable <= 1;
+        // record up
+        sw = 4'b0001;
+        // record sample
+        btnR = 1;
         @(posedge clk);
+        for(int i =0;i<100;i++) begin 
+            micData <= ~micData;
+            @(posedge clk);//wait for pll to sync
+        end
         
-        enable <= 0;
-        for(int i = 0; i < 10000;i++)
-            @(posedge clk);
+        for(int i =0;i<100;i++)
+            @(posedge clk);//wait for pll to sync
+        
+        btnR = 0;
+        @(posedge clk);
+        @(posedge clk);
+
+        // test sample
+        sw = 4'b0000;
+        // record sample
+        btnR = 1;
+        @(posedge clk);
+        for(int i =0;i<100;i++) begin 
+            micData <= ~micData;
+            @(posedge clk);//wait for pll to sync
+        end
+
         $finish;
     end
     
@@ -50,14 +68,15 @@ module voice_test_top
      output logic micClk,
      output logic micLRSel,
      
-     input  logic [15:12] sw,
+     input  logic [3:0] sw, // 15:12
+
      output logic [1:0] led);
      
      logic ram_wr;
      
      logic control_in;
      
-     assign control_in = (sw=='d0);
+     assign control_in = (sw =='d0);
      
      logic [31:0] ram_data, ram_out;
      
