@@ -90,8 +90,8 @@ module PDM_control
     logic [1:0] match_in;
     logic       ld_match;
 
-    matcher mat(.match_count,
-                .match(match_in));
+    matcher #(14) mat(.match_count,
+                      .match(match_in));
    
 
     always_ff@(posedge clk, posedge rst) begin
@@ -133,12 +133,6 @@ module PDM_control
                                                   .micData,
                                                   .ram_data,
                                                   .ram_wr);
-
-    thresh_comp #(15) t_up(ram_out, up_out, up_val); 
-    thresh_comp #(15) t_down(ram_out, down_out, down_val); 
-    thresh_comp #(15) t_left(ram_out, left_out, left_val); 
-    thresh_comp #(15) t_right(ram_out, right_out, right_val); 
-    
     
     always_comb begin
         //RECORD
@@ -190,7 +184,8 @@ endmodule: PDM_control
 //Get the maximum tally
 //In case of no max, choose left
 module matcher
-    (input logic [3:0][11:0] match_count,
+    #(parameter w = 14)
+    (input logic [3:0][w-1:0] match_count,
      output logic [1:0] match);
      
      logic l_max, r_max , u_max, d_max;
