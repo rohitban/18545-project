@@ -144,13 +144,6 @@ sample_ram right_ram(.clka(clk),
                     .douta(right_out),
                     .wea(ld_right),//TODO: connect
                     .addra(ram_addr));                    
-                                                        
-   
-/*record_ram  rc_ram(.clka(clk),
-                   .dina(ram_data),
-                   .douta(ram_out),
-                   .wea(ram_wr),
-                   .addra(ram_addr));*/
 
 
 // This module stores the FFT-ed sample data
