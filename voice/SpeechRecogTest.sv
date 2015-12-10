@@ -17,7 +17,7 @@ module SpeechRecog (
   // Indication LEDs
   output logic [1:0]    match,        // 2-bit pattern to indicate which one it matched
   
-  input  logic [15:12]    sw,//TEST
+  input  logic [3:0]    sw,//TEST
   
   //output logic [15:0]    led,//TEST
   
@@ -35,27 +35,7 @@ module SpeechRecog (
 // TODO need to change
 sample_freq #(6,6'd42) div(.clk,.rst(~reset_L),
                               .div_clk(micClk));
-/*
-sample_freq #(6,6'd42) div(.clk,.rst(~reset_L),
-                              .div_clk(micClk));
-*/
-///////////////////////		RAM Interface	////////////////////////
-// For Recorded voice samples/real mode --> Slow Ram
-// For FFT-ed voice sample mode --> Fast Ram
-// For FFT-ed voice real mode --> Slow Ram
-
-// This module records the time-domain voice data
-//logic [31:0] ram_out, 
 logic [31:0] up_out, down_out, left_out, right_out;
-//logic ram_wr;
-
-//logic [7:0] ram_addr;
-
-//logic [11:0] access_addr;
-
-//sample_ram
-
-// The recording module
 logic rec_en;
 
 logic ld_up, ld_down, ld_left, ld_right;
@@ -64,13 +44,13 @@ assign rec_en = record;
 
 //Assign ram load signals
 
-assign ld_up = sw[12]&ram_wr;
+assign ld_up = sw[0] & ram_wr;
 
-assign ld_down = sw[13]&ram_wr;
+assign ld_down = sw[1] & ram_wr;
 
-assign ld_left = sw[14]&ram_wr;
+assign ld_left = sw[2] & ram_wr;
 
-assign ld_right = sw[15]&ram_wr;
+assign ld_right = sw[3] & ram_wr;
 
 
 //Determine whether we are recording voice samples
@@ -80,17 +60,6 @@ logic control_in;
 
 assign control_in = (sw=='d0);
 
-/*
-voice_record #(8) vr(.enable(rec_en), 
-                     .voice_data(micData),
-                      
-                     .store_data(ram_data),
-                     .store_wr(ram_wr),
-                     .ram_addr,
-                     
-                      
-                     .reset_L,
-                     .clk);*/
 
 PDM_control pdm_ctrl(.clk,
                      .rst(~reset_L),
@@ -143,58 +112,7 @@ sample_ram right_ram(.clka(clk),
                     .dina(ram_data),
                     .douta(right_out),
                     .wea(ld_right),//TODO: connect
-                    .addra(ram_addr));                    
-
-
-// This module stores the FFT-ed sample data
-//fft_sample_ram
-// This module stores the FFT-ed realtime recording
-//fft_real_ram
-
-// A comparison module btw fft_sample_ram and fft_real_ram
-//sample_compare sc();
-
-// Built in module for audio DAC_ADC
-//AUDIO_DAC_ADC u4 (
-//  // Audio Side
-//  .oAUD_BCK(AUD_BCLK),
-//  .oAUD_DATA(AUD_DACDAT),
-//  .oAUD_LRCK(CLK),
-//  .oAUD_inL(audio_inL), // audio data from ADC 
-//  .oAUD_inR(audio_inR), // audio data from ADC 
-//  .iAUD_ADCDAT(AUD_ADCDAT),
-//  .iAUD_extL(audio_outL), // audio data to DAC
-//  .iAUD_extR(audio_outR), // audio data to DAC
-//  // Control Signals
-//  .iCLK_18_4(AUD_CTRL_CLK),
-//  .iRST_N(DLY_RST));
-//
-//// Built in module for on chip fast FFT
-//FFTModule fftc (
-//  .iReset(~KEY[0]),
-//  .iStart(lc),
-//  .iStateClk(NIOS_CLK),
-//  .oSampAddr(sampleAddr),
-//  .iSamp(sample),
-//  .iReadAddr(fftaddr),
-//  .iReadClock(NIOS_CLK),
-//  .oPower(fftcoeff),
-//  .oExp(fftlevel),
-//  .oDone(fftcomplete));
-//
-//// FIXME not sure what's used for
-//Reset_Delay r0 (
-//  .iCLK(CLOCK_50),
-//  .oRESET(DLY_RST)
-//);
-//
-//// FIXME not sure why this is here 
-//audiopll p1 (
-//  .areset(~DLY_RST),
-//  .inclk0(CLOCK_27),
-//  .c0(AUD_CTRL_CLK)
-//);
-//
+                    .addra(ram_addr));
 
 endmodule: SpeechRecog
 

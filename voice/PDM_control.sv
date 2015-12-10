@@ -9,6 +9,8 @@
 `define RIGHT 'd2
 `define DOWN 'd3
 
+`define THRESH 'd3
+
 `define DIRS 'd4
 
 `define SAMPLE_FREQ 'd10000
@@ -132,6 +134,12 @@ module PDM_control
                                                   .ram_data,
                                                   .ram_wr);
 
+    thresh_comp #(15) t_up(ram_out, up_out, up_val); 
+    thresh_comp #(15) t_down(ram_out, down_out, down_val); 
+    thresh_comp #(15) t_left(ram_out, left_out, left_val); 
+    thresh_comp #(15) t_right(ram_out, right_out, right_val); 
+    
+    
     always_comb begin
         //RECORD
         clr = 0;
@@ -163,6 +171,7 @@ module PDM_control
                 ns = (count < `CHUNKS)?COMPARE:STOP;
                 incr = (count < `CHUNKS)?1'b1:1'b0;
                 clr = (count<`CHUNKS)?1'b0:1'b1;
+
 
                 //Load the register that holds the match
                 //value
